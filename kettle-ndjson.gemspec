@@ -6,9 +6,20 @@
 # kettle-jem will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
 
+gem_version =
+  if Gem.ruby_version >= Gem::Version.new("3.1")
+    # Loading Version into an anonymous module allows version.rb to get code coverage from SimpleCov!
+    # See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
+    # See: https://github.com/panorama-ed/memo_wise/pull/397
+    Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/kettle/ndjson/version.rb", mod) }::Kettle::Ndjson::Version::VERSION
+  else
+    require_relative "lib/kettle/ndjson/version"
+    Kettle::Ndjson::Version::VERSION
+  end
+
 Gem::Specification.new do |spec|
   spec.name = "kettle-ndjson"
-  spec.version = Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/kettle/ndjson/version.rb", mod) }::Kettle::Ndjson::Version::VERSION
+  spec.version = gem_version
   spec.authors = ["Peter H. Boling"]
   spec.email = ["floss@galtzo.com"]
 
@@ -16,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.description = "📟️ NDJSON event stream primitives, filters, recorders, and payload helpers shared by Kettle CLI tools."
   spec.homepage = "https://github.com/kettle-dev/kettle-ndjson"
   spec.licenses = ["MIT"]
-  spec.required_ruby_version = ">= 3.2.0"
+  spec.required_ruby_version = ">= 2.4.0"
 
   # Linux distros often package gems and securely certify them independent
   #   of the official RubyGem certification process. Allowed via ENV["SKIP_GEM_SIGNING"]
@@ -91,7 +102,7 @@ Gem::Specification.new do |spec|
   #       visibility and discoverability.
   #       However, development dependencies in gemspec will install on
   #       all versions of Ruby that will run in CI.
-  #       This gem, and its gemspec runtime dependencies, will install on Ruby down to 3.2.0.
+  #       This gem, and its gemspec runtime dependencies, will install on Ruby down to 2.4.0.
   #       This gem, and its gemspec development dependencies, will install on Ruby down to 3.2.0.
   #       Thus, dev dependencies in gemspec must have
   #

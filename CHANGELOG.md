@@ -22,6 +22,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Lowered the published runtime Ruby floor to Ruby 2.4.0 so Kettle tools that
+  support older Rubies can depend on `kettle-ndjson`.
+
 ### Deprecated
 
 ### Removed

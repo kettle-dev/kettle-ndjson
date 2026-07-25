@@ -39,7 +39,7 @@ I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-ta
 
 ### Compatibility
 
-Compatible with MRI Ruby 3.2.0+, and concordant releases of JRuby, and TruffleRuby.
+Compatible with MRI Ruby 2.4.0+, and concordant releases of JRuby, and TruffleRuby.
 CI workflows and Appraisals are generated for MRI Ruby 3.2.0+.
 This test floor is configured by `ruby.test_minimum` in `.kettle-jem.yml` and
 may be higher than the gem's runtime compatibility floor when legacy Rubies are
