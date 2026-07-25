@@ -1,6 +1,9 @@
 module Kettle
   module Ndjson
     VERSION: String
+    module Version
+      VERSION: String
+    end
     # See the writing guide of rbs: https://github.com/ruby/rbs#guides
   end
 end
