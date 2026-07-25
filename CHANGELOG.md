@@ -20,6 +20,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- Added `Kettle::Ndjson` event stream, recorder, filter, timing, step,
+  diagnostic, and summary helpers for newline-delimited JSON CLI events.
+
 ### Changed
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.

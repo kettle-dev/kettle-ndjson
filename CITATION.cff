@@ -12,9 +12,9 @@ authors:
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'TODO: Put your gem's public repo URL here.'
+    value: 'https://github.com/kettle-dev/kettle-ndjson'
     description: "kettle-ndjson"
-repository-code: 'TODO: Put your gem's public repo URL here.'
+repository-code: 'https://github.com/kettle-dev/kettle-ndjson'
 abstract: >-
   kettle-ndjson
 license: See license file

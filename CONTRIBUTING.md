@@ -215,7 +215,7 @@ Your picture could be here!
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/TODO: Put your gem's public repo URL here./-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/kettle-dev/kettle-ndjson/-/graphs/main][🚎contributors-gl]
 
 ## For Maintainers
 
@@ -266,15 +266,15 @@ NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in th
 14. Run `bundle exec rake release` which will create a git tag for the version,
     push git commits and tags, and push the `.gem` file to the gem host configured in the gemspec.
 
-[📜src-gl]: https://gitlab.com/TODO: Put your gem's public repo URL here.
-[📜src-cb]: https://codeberg.org/TODO: Put your gem's public repo URL here.
-[📜src-gh]: TODO: Put your gem's public repo URL here.
-[🧪build]: TODO: Put your gem's public repo URL here./actions
-[🤝conduct]: TODO: Put your gem's public repo URL here./blob/main/CODE_OF_CONDUCT.md
+[📜src-gl]: https://gitlab.com/kettle-dev/kettle-ndjson
+[📜src-cb]: https://codeberg.org/kettle-dev/kettle-ndjson
+[📜src-gh]: https://github.com/kettle-dev/kettle-ndjson
+[🧪build]: https://github.com/kettle-dev/kettle-ndjson/actions
+[🤝conduct]: https://github.com/kettle-dev/kettle-ndjson/blob/main/CODE_OF_CONDUCT.md
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: TODO: Put your gem's public repo URL here./graphs/contributors
-[🚎contributors-gl]: https://gitlab.com/TODO: Put your gem's public repo URL here./-/graphs/main
-[🖐contributors-img]: https://contrib.rocks/image?repo=TODO: Put your gem's public repo URL here.
+[🖐contributors]: https://github.com/kettle-dev/kettle-ndjson/graphs/contributors
+[🚎contributors-gl]: https://gitlab.com/kettle-dev/kettle-ndjson/-/graphs/main
+[🖐contributors-img]: https://contrib.rocks/image?repo=kettle-dev/kettle-ndjson
 [💎gem-coop]: https://gem.coop
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems
 [🔒️rubygems-checksums-pr]: https://github.com/rubygems/rubygems/pull/6022

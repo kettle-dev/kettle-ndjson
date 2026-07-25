@@ -66,14 +66,14 @@ The _amazing_ test matrix is powered by the kettle-dev stack.
 
 | Federated [DVCS][💎d-in-dvcs] Repository | Status | Issues | PRs | Wiki | CI | Discussions |
 |-------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
-| 🧪 [TODO: Put your gem's public repo URL here. on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
-| 🧊 [TODO: Put your gem's public repo URL here. on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
-| 🐙 [TODO: Put your gem's public repo URL here. on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
+| 🧪 [kettle-ndjson on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
+| 🧊 [kettle-ndjson on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
+| 🐙 [kettle-ndjson on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
 | 🎮️ | | | | | | |
 
 </details>
 
-[gh-discussions]: TODO: Put your gem's public repo URL here./discussions
+[gh-discussions]: https://github.com/kettle-dev/kettle-ndjson/discussions
 
 ### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/kettle-ndjson)](https://tidelift.com/subscription/pkg/rubygems-kettle-ndjson?utm_source=rubygems-kettle-ndjson&utm_medium=referral&utm_campaign=readme)
 
@@ -116,7 +116,24 @@ gem install kettle-ndjson
 
 ## 🔧 Basic Usage
 
-TODO: Write usage instructions here
+Create an event stream for newline-delimited JSON output:
+
+```ruby
+require "kettle/ndjson"
+
+events = Kettle::Ndjson.event_stream($stdout, types: "progress")
+Kettle::Ndjson.emit_phase_event(events, :release, status: "started")
+Kettle::Ndjson.emit_step_event(
+  events,
+  "command_step",
+  {name: "bundle_install", status: "started", command: %w[bundle install]},
+  phase: "prepare"
+)
+Kettle::Ndjson.emit_summary_event(events, status: "ok", diagnostics_count: 0)
+```
+
+Use `types:` to filter event streams. Built-in aliases are `default`,
+`progress`, and `all`.
 
 ## 🦷 FLOSS Funding
 
@@ -161,7 +178,7 @@ NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day
 No sponsors yet. Be the first!
 <!-- OPENCOLLECTIVE-ORGANIZATIONS:END -->
 
-[kettle-readme-backers]: TODO: Put your gem's public repo URL here./blob/main/bin/kettle-readme-backers
+[kettle-readme-backers]: https://github.com/kettle-dev/kettle-ndjson/blob/main/bin/kettle-readme-backers
 
 ### Another way to support open-source
 
@@ -220,11 +237,11 @@ Also see GitLab Contributors:
 <details markdown="1">
  <summary>⭐️ Star History</summary>
 
-<a href="https://star-history.com/TODO: Put your gem's public repo URL here.&Date">
+<a href="https://star-history.com/#kettle-dev/kettle-ndjson&Date">
  <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=TODO: Put your gem's public repo URL here.&type=Date&theme=dark" />
- <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=TODO: Put your gem's public repo URL here.&type=Date" />
- <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=TODO: Put your gem's public repo URL here.&type=Date" />
+ <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&type=Date&theme=dark" />
+ <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&type=Date" />
+ <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&type=Date" />
  </picture>
 </a>
 
@@ -259,7 +276,7 @@ See [CHANGELOG.md][📌changelog] for a list of releases.
 ## 📄 License
 
 The gem is available as open source under the terms of
-the [MIT](TODO: Put your gem's public repo URL here./blob/main/MIT.md) [![License: MIT][📄license-img]][📄license-ref].
+the [MIT](https://github.com/kettle-dev/kettle-ndjson/blob/main/MIT.md) [![License: MIT][📄license-img]][📄license-ref].
 
 ### © Copyright
 
@@ -328,12 +345,12 @@ Thanks for RTFM. ☺️
 [✉️ruby-forum]: https://www.rubyforum.org/c/help/8
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[⛳️gem-namespace]: TODO: Put your gem's public repo URL here.
+[⛳️gem-namespace]: https://github.com/kettle-dev/kettle-ndjson
 [⛳️namespace-img]: https://img.shields.io/badge/namespace-Kettle::Ndjson-3C2D2D.svg?style=square&logo=ruby&logoColor=white
 [⛳️gem-name]: https://bestgems.org/gems/kettle-ndjson
 [⛳️name-img]: https://img.shields.io/badge/name-kettle--ndjson-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
-[⛳️tag-img]: https://img.shields.io/github/tag/TODO: Put your gem's public repo URL here..svg
-[⛳️tag]: TODO: Put your gem's public repo URL here./releases
+[⛳️tag-img]: https://img.shields.io/github/tag/kettle-dev/kettle-ndjson.svg
+[⛳️tag]: https://github.com/kettle-dev/kettle-ndjson/releases
 [🚂maint-blog]: http://www.railsbling.com/tags/kettle-ndjson
 [🚂maint-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
 [🚂maint-contact]: http://www.railsbling.com/contact
@@ -368,89 +385,89 @@ Thanks for RTFM. ☺️
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [🚂railsbling]: http://www.railsbling.com
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
-[📜src-gl]: https://gitlab.com/TODO: Put your gem's public repo URL here.
+[📜src-gl]: https://gitlab.com/kettle-dev/kettle-ndjson
 [📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
-[📜src-cb]: https://codeberg.org/TODO: Put your gem's public repo URL here.
+[📜src-cb]: https://codeberg.org/kettle-dev/kettle-ndjson
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=GitHub&logoColor=green
-[📜src-gh]: TODO: Put your gem's public repo URL here.
+[📜src-gh]: https://github.com/kettle-dev/kettle-ndjson
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
-[📜gl-wiki]: https://gitlab.com/TODO: Put your gem's public repo URL here./-/wikis/home
-[📜gh-wiki]: TODO: Put your gem's public repo URL here./wiki
+[📜gl-wiki]: https://gitlab.com/kettle-dev/kettle-ndjson/-/wikis/home
+[📜gh-wiki]: https://github.com/kettle-dev/kettle-ndjson/wiki
 [📜gl-wiki-img]: https://img.shields.io/badge/wiki-gitlab-943CD2.svg?style=for-the-badge&logo=gitlab&logoColor=white
 [📜gh-wiki-img]: https://img.shields.io/badge/wiki-github-943CD2.svg?style=for-the-badge&logo=github&logoColor=white
 [👽dl-rank]: https://bestgems.org/gems/kettle-ndjson
 [👽dl-ranki]: https://img.shields.io/gem/rd/kettle-ndjson.svg
 [👽version]: https://bestgems.org/gems/kettle-ndjson
 [👽versioni]: https://img.shields.io/gem/v/kettle-ndjson.svg
-[🏀qlty-mnt]: https://qlty.sh/gh/TODO: Put your gem's public repo URL here./projects/TODO: Put your gem's public repo URL here.
-[🏀qlty-mnti]: https://qlty.sh/gh/TODO: Put your gem's public repo URL here./projects/TODO: Put your gem's public repo URL here./maintainability.svg
-[🏀qlty-cov]: https://qlty.sh/gh/TODO: Put your gem's public repo URL here./projects/TODO: Put your gem's public repo URL here./metrics/code?sort=coverageRating
-[🏀qlty-covi]: https://qlty.sh/gh/TODO: Put your gem's public repo URL here./projects/TODO: Put your gem's public repo URL here./coverage.svg
-[🏀codecov]: https://codecov.io/gh/TODO: Put your gem's public repo URL here.
-[🏀codecovi]: https://codecov.io/gh/TODO: Put your gem's public repo URL here./graph/badge.svg
-[🏀coveralls]: https://coveralls.io/github/TODO: Put your gem's public repo URL here.?branch=main
-[🏀coveralls-img]: https://coveralls.io/repos/github/TODO: Put your gem's public repo URL here./badge.svg?branch=main
-[🚎ruby-2.4-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.4.yml
-[🚎ruby-2.4-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.4.yml/badge.svg
-[🚎ruby-2.5-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.5.yml
-[🚎ruby-2.5-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.5.yml/badge.svg
-[🚎ruby-2.6-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.6.yml
-[🚎ruby-2.6-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.6.yml/badge.svg
-[🚎ruby-2.7-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.7.yml
-[🚎ruby-2.7-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-2.7.yml/badge.svg
-[🚎ruby-3.0-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.0.yml
-[🚎ruby-3.0-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.0.yml/badge.svg
-[🚎ruby-3.1-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.1.yml
-[🚎ruby-3.1-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.1.yml/badge.svg
-[🚎ruby-3.2-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.2.yml
-[🚎ruby-3.2-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.2.yml/badge.svg
-[🚎ruby-3.3-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.3.yml
-[🚎ruby-3.3-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.3.yml/badge.svg
-[🚎ruby-3.4-wf]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.4.yml
-[🚎ruby-3.4-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/ruby-3.4.yml/badge.svg
-[🚎jruby-9.1-wf]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.1.yml
-[🚎jruby-9.1-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.1.yml/badge.svg
-[🚎jruby-9.2-wf]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.2.yml
-[🚎jruby-9.2-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.2.yml/badge.svg
-[🚎jruby-9.3-wf]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.3.yml
-[🚎jruby-9.3-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.3.yml/badge.svg
-[🚎jruby-9.4-wf]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.4.yml
-[🚎jruby-9.4-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-9.4.yml/badge.svg
-[🚎jruby-10.0-wf]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-10.0.yml
-[🚎jruby-10.0-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/jruby-10.0.yml/badge.svg
-[🚎truby-22.3-wf]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-22.3.yml
-[🚎truby-22.3-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-22.3.yml/badge.svg
-[🚎truby-23.0-wf]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-23.0.yml
-[🚎truby-23.0-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-23.0.yml/badge.svg
-[🚎truby-23.1-wf]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-23.1.yml
-[🚎truby-23.1-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-23.1.yml/badge.svg
-[🚎truby-24.2-wf]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-24.2.yml
-[🚎truby-24.2-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-24.2.yml/badge.svg
-[🚎truby-25.0-wf]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-25.0.yml
-[🚎truby-25.0-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-25.0.yml/badge.svg
-[🚎truby-33.0-wf]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-33.0.yml
-[🚎truby-33.0-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/truffleruby-33.0.yml/badge.svg
-[🚎2-cov-wf]: TODO: Put your gem's public repo URL here./actions/workflows/coverage.yml
-[🚎2-cov-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/coverage.yml/badge.svg
-[🚎3-hd-wf]: TODO: Put your gem's public repo URL here./actions/workflows/heads.yml
-[🚎3-hd-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/heads.yml/badge.svg
-[🚎5-st-wf]: TODO: Put your gem's public repo URL here./actions/workflows/style.yml
-[🚎5-st-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/style.yml/badge.svg
-[🚎9-t-wf]: TODO: Put your gem's public repo URL here./actions/workflows/truffle.yml
-[🚎9-t-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/truffle.yml/badge.svg
-[🚎10-j-wf]: TODO: Put your gem's public repo URL here./actions/workflows/jruby.yml
-[🚎10-j-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/jruby.yml/badge.svg
-[🚎11-c-wf]: TODO: Put your gem's public repo URL here./actions/workflows/current.yml
-[🚎11-c-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/current.yml/badge.svg
-[🚎12-crh-wf]: TODO: Put your gem's public repo URL here./actions/workflows/dep-heads.yml
-[🚎12-crh-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/dep-heads.yml/badge.svg
-[🚎13-🔒️-wf]: TODO: Put your gem's public repo URL here./actions/workflows/locked_deps.yml
-[🚎13-🔒️-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/locked_deps.yml/badge.svg
-[🚎14-🔓️-wf]: TODO: Put your gem's public repo URL here./actions/workflows/unlocked_deps.yml
-[🚎14-🔓️-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/unlocked_deps.yml/badge.svg
-[🚎15-🪪-wf]: TODO: Put your gem's public repo URL here./actions/workflows/license-eye.yml
-[🚎15-🪪-wfi]: TODO: Put your gem's public repo URL here./actions/workflows/license-eye.yml/badge.svg
+[🏀qlty-mnt]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson
+[🏀qlty-mnti]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson/maintainability.svg
+[🏀qlty-cov]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson/metrics/code?sort=coverageRating
+[🏀qlty-covi]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson/coverage.svg
+[🏀codecov]: https://codecov.io/gh/kettle-dev/kettle-ndjson
+[🏀codecovi]: https://codecov.io/gh/kettle-dev/kettle-ndjson/graph/badge.svg
+[🏀coveralls]: https://coveralls.io/github/kettle-dev/kettle-ndjson?branch=main
+[🏀coveralls-img]: https://coveralls.io/repos/github/kettle-dev/kettle-ndjson/badge.svg?branch=main
+[🚎ruby-2.4-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.4.yml
+[🚎ruby-2.4-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.4.yml/badge.svg
+[🚎ruby-2.5-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.5.yml
+[🚎ruby-2.5-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.5.yml/badge.svg
+[🚎ruby-2.6-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.6.yml
+[🚎ruby-2.6-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.6.yml/badge.svg
+[🚎ruby-2.7-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.7.yml
+[🚎ruby-2.7-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.7.yml/badge.svg
+[🚎ruby-3.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.0.yml
+[🚎ruby-3.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.0.yml/badge.svg
+[🚎ruby-3.1-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.1.yml
+[🚎ruby-3.1-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.1.yml/badge.svg
+[🚎ruby-3.2-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.2.yml
+[🚎ruby-3.2-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.2.yml/badge.svg
+[🚎ruby-3.3-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.3.yml
+[🚎ruby-3.3-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.3.yml/badge.svg
+[🚎ruby-3.4-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.4.yml
+[🚎ruby-3.4-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.4.yml/badge.svg
+[🚎jruby-9.1-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.1.yml
+[🚎jruby-9.1-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.1.yml/badge.svg
+[🚎jruby-9.2-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.2.yml
+[🚎jruby-9.2-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.2.yml/badge.svg
+[🚎jruby-9.3-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.3.yml
+[🚎jruby-9.3-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.3.yml/badge.svg
+[🚎jruby-9.4-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.4.yml
+[🚎jruby-9.4-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.4.yml/badge.svg
+[🚎jruby-10.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-10.0.yml
+[🚎jruby-10.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-10.0.yml/badge.svg
+[🚎truby-22.3-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-22.3.yml
+[🚎truby-22.3-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-22.3.yml/badge.svg
+[🚎truby-23.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.0.yml
+[🚎truby-23.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.0.yml/badge.svg
+[🚎truby-23.1-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.1.yml
+[🚎truby-23.1-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.1.yml/badge.svg
+[🚎truby-24.2-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-24.2.yml
+[🚎truby-24.2-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-24.2.yml/badge.svg
+[🚎truby-25.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-25.0.yml
+[🚎truby-25.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-25.0.yml/badge.svg
+[🚎truby-33.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-33.0.yml
+[🚎truby-33.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-33.0.yml/badge.svg
+[🚎2-cov-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/heads.yml/badge.svg
+[🚎5-st-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/style.yml/badge.svg
+[🚎9-t-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby.yml/badge.svg
+[🚎11-c-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/current.yml
+[🚎11-c-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/current.yml/badge.svg
+[🚎12-crh-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/dep-heads.yml
+[🚎12-crh-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/dep-heads.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/locked_deps.yml
+[🚎13-🔒️-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/locked_deps.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/unlocked_deps.yml
+[🚎14-🔓️-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/unlocked_deps.yml/badge.svg
+[🚎15-🪪-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/license-eye.yml
+[🚎15-🪪-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/license-eye.yml/badge.svg
 [💎ruby-1.8i]: https://img.shields.io/badge/Ruby-1.8_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-1.9i]: https://img.shields.io/badge/Ruby-1.9_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.0i]: https://img.shields.io/badge/Ruby-2.0_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
@@ -484,38 +501,38 @@ Thanks for RTFM. ☺️
 [💎jruby-10.0i]: https://img.shields.io/badge/JRuby-10.0-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
-[🤝gh-issues]: TODO: Put your gem's public repo URL here./issues
-[🤝gh-pulls]: TODO: Put your gem's public repo URL here./pulls
-[🤝gl-issues]: https://gitlab.com/TODO: Put your gem's public repo URL here./-/issues
-[🤝gl-pulls]: https://gitlab.com/TODO: Put your gem's public repo URL here./-/merge_requests
-[🤝cb-issues]: https://codeberg.org/TODO: Put your gem's public repo URL here./issues
-[🤝cb-pulls]: https://codeberg.org/TODO: Put your gem's public repo URL here./pulls
+[🤝gh-issues]: https://github.com/kettle-dev/kettle-ndjson/issues
+[🤝gh-pulls]: https://github.com/kettle-dev/kettle-ndjson/pulls
+[🤝gl-issues]: https://gitlab.com/kettle-dev/kettle-ndjson/-/issues
+[🤝gl-pulls]: https://gitlab.com/kettle-dev/kettle-ndjson/-/merge_requests
+[🤝cb-issues]: https://codeberg.org/kettle-dev/kettle-ndjson/issues
+[🤝cb-pulls]: https://codeberg.org/kettle-dev/kettle-ndjson/pulls
 [🤝cb-donate]: https://donate.codeberg.org/
-[🤝contributing]: TODO: Put your gem's public repo URL here./blob/main/CONTRIBUTING.md
-[🏀codecov-g]: https://codecov.io/gh/TODO: Put your gem's public repo URL here./graph/badge.svg
+[🤝contributing]: https://github.com/kettle-dev/kettle-ndjson/blob/main/CONTRIBUTING.md
+[🏀codecov-g]: https://codecov.io/gh/kettle-dev/kettle-ndjson/graph/badge.svg
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: TODO: Put your gem's public repo URL here./graphs/contributors
-[🖐contributors-img]: https://contrib.rocks/image?repo=TODO: Put your gem's public repo URL here.
-[🚎contributors-gl]: https://gitlab.com/TODO: Put your gem's public repo URL here./-/graphs/main
-[🪇conduct]: TODO: Put your gem's public repo URL here./blob/main/CODE_OF_CONDUCT.md
+[🖐contributors]: https://github.com/kettle-dev/kettle-ndjson/graphs/contributors
+[🖐contributors-img]: https://contrib.rocks/image?repo=kettle-dev/kettle-ndjson
+[🚎contributors-gl]: https://gitlab.com/kettle-dev/kettle-ndjson/-/graphs/main
+[🪇conduct]: https://github.com/kettle-dev/kettle-ndjson/blob/main/CODE_OF_CONDUCT.md
 [🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 [📌semver]: https://semver.org/spec/v2.0.0.html
 [📌semver-img]: https://img.shields.io/badge/semver-2.0.0-259D6C.svg?style=flat
 [📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
 [📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
-[📌changelog]: TODO: Put your gem's public repo URL here./blob/main/CHANGELOG.md
+[📌changelog]: https://github.com/kettle-dev/kettle-ndjson/blob/main/CHANGELOG.md
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-34495e.svg?style=flat
 [📌gitmoji]: https://gitmoji.dev
 [📌gitmoji-img]: https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 [🧮kloc-img]: https://img.shields.io/badge/KLOC-5.053-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
-[🔐security]: TODO: Put your gem's public repo URL here./blob/main/SECURITY.md
+[🔐security]: https://github.com/kettle-dev/kettle-ndjson/blob/main/SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 [📄license]: LICENSE.md
-[📄license-ref]: TODO: Put your gem's public repo URL here./blob/main/MIT.md
+[📄license-ref]: https://github.com/kettle-dev/kettle-ndjson/blob/main/MIT.md
 [📄license-img]: https://img.shields.io/badge/License-MIT-259D6C.svg
 [📄license-compat]: https://www.apache.org/legal/resolved.html#category-a
 [📄license-compat-img]: https://img.shields.io/badge/Apache_Compatible:_Category_A-%E2%9C%93-259D6C.svg?style=flat&logo=Apache
@@ -525,7 +542,7 @@ Thanks for RTFM. ☺️
 [🚎yard-current]: http://rubydoc.info/gems/kettle-ndjson
 [🚎yard-head]: https://kettle-ndjson.galtzo.com
 [💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
-[💎SHA_checksums]: https://gitlab.com/TODO: Put your gem's public repo URL here./-/tree/main/checksums
+[💎SHA_checksums]: https://gitlab.com/kettle-dev/kettle-ndjson/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
 [💎rlts-img]: https://img.shields.io/badge/code_style_&_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
 [💎appraisal2]: https://github.com/appraisal-rb/appraisal2

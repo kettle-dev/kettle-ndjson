@@ -12,9 +12,9 @@ Gem::Specification.new do |spec|
   spec.authors = ["Peter H. Boling"]
   spec.email = ["floss@galtzo.com"]
 
-  spec.summary = "📟️ TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "📟️ TODO: Write a longer description or delete this line."
-  spec.homepage = "https://github.com/pboling/kettle-ndjson"
+  spec.summary = "📟️ NDJSON event streaming toolkit for Kettle CLI tools"
+  spec.description = "📟️ NDJSON event stream primitives, filters, recorders, and payload helpers shared by Kettle CLI tools."
+  spec.homepage = "https://github.com/kettle-dev/kettle-ndjson"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 3.2.0"
 
@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
     end
   end
 
-  spec.metadata["homepage_uri"] = "TODO: Put your gem's website or public repo URL here."
+  spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"

@@ -20,6 +20,7 @@ rescue LoadError => error
 end
 
 # External RSpec & related config
+require "stringio"
 require "kettle/test/rspec"
 
 require "kettle/ndjson"

@@ -1,9 +1,44 @@
 module Kettle
   module Ndjson
     VERSION: String
+    EVENT_TYPES: Array[String]
+    DEFAULT_EVENT_TYPES: Array[String]
+    EVENT_TYPE_ALIASES: Hash[String, Array[String]]
+
+    def self.event_stream: (untyped io, ?types: String? types, ?event_types: Array[String] event_types, ?aliases: Hash[String, Array[String]] aliases) -> EventStream
+    def self.event_recorder: (?untyped stream, ?phase_timings: Array[Hash[Symbol, untyped]] phase_timings) -> EventRecorder
+    def self.normalize_event_types: (String? types, ?event_types: Array[String] event_types, ?aliases: Hash[String, Array[String]] aliases) -> Array[String]
+    def self.emit_event: (untyped events, String type, ?Hash[Symbol, untyped] payload) -> void
+    def self.emit_phase_event: (untyped events, String | Symbol phase, status: String status, **untyped payload) -> void
+    def self.record_phase_timing: (untyped events, String | Symbol phase, status: String status, duration_ms: Float duration_ms, ?payload: Hash[Symbol, untyped] payload) -> void
+    def self.emit_step_event: (untyped events, String event_type, Hash[Symbol | String, untyped] step, phase: String phase, ?index: Integer? index, ?total: Integer? total) -> void
+    def self.emit_diagnostic_event: (untyped events, untyped diagnostic, ?index: Integer? index, ?total: Integer? total) -> void
+    def self.emit_summary_event: (untyped events, Hash[Symbol, untyped] payload) -> void
+    def self.step_event_mark: (Hash[Symbol | String, untyped] step) -> String
+    def self.payload_value: (Hash[Symbol | String, untyped] payload, Symbol key) -> untyped
+    def self.compact_payload: (Hash[Symbol, untyped] payload) -> Hash[Symbol, untyped]
+
+    class Error < StandardError
+    end
+
+    class UnknownEventTypeError < Error
+    end
+
+    class EventStream
+      attr_reader types: Array[String]
+      def initialize: (untyped io, types: Array[String] types) -> void
+      def emit: (Hash[Symbol, untyped] payload) -> void
+    end
+
+    class EventRecorder
+      attr_reader phase_timings: Array[Hash[Symbol, untyped]]
+      def initialize: (?untyped stream, ?Array[Hash[Symbol, untyped]] phase_timings) -> void
+      def emit: (Hash[Symbol, untyped] payload) -> void
+      def record_phase_timing: (Hash[Symbol, untyped] payload) -> void
+    end
+
     module Version
       VERSION: String
     end
-    # See the writing guide of rbs: https://github.com/ruby/rbs#guides
   end
 end
