@@ -478,7 +478,7 @@ kettle-jem:
     ".devcontainer/apt-install/install.sh.example": "b61e020b60ca172bb7b658e63c9cd4342e49bda0531a6b19b36475e515ad20b0"
     ".devcontainer/devcontainer.json.example": "4a80d471379b9720cc65cc89543cbbc0a7be87b188a818160296577c4e87606f"
     ".devcontainer/scripts/setup-tree-sitter.sh.example": "c34f48d7bac8561fb780c4c7a81cec5004c3ac0edc11f229799ec9a4e3eccd54"
-    ".env.local.example": "f4d1e894b7f6c0975cbcac790762b3e4d18a108ecedaa87f9380f3510a5b9892"
+    ".env.local.example": "35cb867e8bacb75252a85c29f78899b36d0d1843511ae1ba1fbc7da863b128b3"
     ".envrc.example": "b7232f4bae0fb399cc9c9cdc4a5eb694bd69623aeeadcbab18c9990e443040a1"
     ".envrc.no-osc.example": "b7232f4bae0fb399cc9c9cdc4a5eb694bd69623aeeadcbab18c9990e443040a1"
     ".gemrc.example": "77b1c36ae6f91bedf08b99e662a971b02f7e66e0d65267805d068d30ff118aba"
