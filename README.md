@@ -1,14 +1,16 @@
-<a href="https://github.com/pboling"><img alt="pboling Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/pboling/avatar-128px.svg" width="14%" align="right"/></a>
+<a href="https://github.com/kettle-dev"><img alt="kettle-dev Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/kettle-dev/avatar-128px.svg" width="14%" align="right"/></a>
 
 # 📟️ Kettle::Ndjson
 
-[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt]
+[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
 
-`if ci_badges.map(&:color).detect { it != "green"}` ☝️, as I may have missed the.
+`if ci_badges.map(&:color).detect { it != "green"}` ☝️ [let me know][✉️discord-invite], as I may have missed the [discord notification][✉️discord-invite].
 
 ---
 
 `if ci_badges.map(&:color).all? { it == "green"}` 👇️ send money so I can do more of this. FLOSS maintenance is now my full-time job.
+
+[![OpenCollective Backers][🖇osc-backers-i]][🖇osc-backers] [![OpenCollective Sponsors][🖇osc-sponsors-i]][🖇osc-sponsors] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate at ko-fi.com][🖇kofi-img]][🖇kofi]
 
 <details markdown="1">
  <summary>👣 How will this project approach the September 2025 hostile takeover of RubyGems? 🚑️</summary>
@@ -23,9 +25,13 @@ I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-ta
 
 | Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Support & Community | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor] |
+| Works with JRuby | [![JRuby 10.0 Compat][💎jruby-10.0i]][🚎jruby-10.0-wf] [![JRuby current Compat][💎jruby-c-i]][🚎10-j-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]|
+| Works with Truffle Ruby | [![Truffle Ruby 24.2 Compat][💎truby-24.2i]][🚎truby-24.2-wf] [![Truffle Ruby 25.0 Compat][💎truby-25.0i]][🚎truby-25.0-wf] [![Truffle Ruby 33.0 Compat][💎truby-33.0i]][🚎truby-33.0-wf] [![Truffle Ruby current Compat][💎truby-c-i]][🚎9-t-wf] [![Truffle Ruby HEAD Compat][💎truby-headi]][🚎3-hd-wf]|
+| Works with MRI Ruby 4 | [![Ruby current Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]|
+| Works with MRI Ruby 3 | [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎ruby-3.2-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎ruby-3.3-wf] [![Ruby 3.4 Compat][💎ruby-3.4i]][🚎ruby-3.4-wf]|
+| Support & Community | [![Join Me on Daily.dev's RubyFriends][✉️ruby-friends-img]][✉️ruby-friends] [![Get help from RubyForum][✉️ruby-forum-img]][✉️ruby-forum] [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor] |
 | Source | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on CodeBerg.org][📜src-cb-img]][📜src-cb] [![Source on GitHub.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc] |
-| Documentation | [![Maintainer Blog][🚂maint-blog-img]][🚂maint-blog] [![GitLab Wiki][📜gl-wiki-img]][📜gl-wiki] [![GitHub Wiki][📜gh-wiki-img]][📜gh-wiki] |
+| Documentation | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![YARD on Galtzo.com][📜docs-head-rd-img]][🚎yard-head] [![Maintainer Blog][🚂maint-blog-img]][🚂maint-blog] [![GitLab Wiki][📜gl-wiki-img]][📜gl-wiki] [![GitHub Wiki][📜gh-wiki-img]][📜gh-wiki] |
 | Compliance | [![License: MIT][📄license-img]][📄license] [![Apache license compatibility: Category A][📄license-compat-img]][📄license-compat] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] |
 | Style | [![Enforced Code Style Linter][💎rlts-img]][💎rlts] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji] [![Compatibility appraised by: appraisal2][💎appraisal2-img]][💎appraisal2] |
 | Maintainer 🎖️ | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact Maintainer][🚂maint-contact-img]][🚂maint-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto] |
@@ -66,10 +72,10 @@ The _amazing_ test matrix is powered by the kettle-dev stack.
 
 | Federated [DVCS][💎d-in-dvcs] Repository | Status | Issues | PRs | Wiki | CI | Discussions |
 |-------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
-| 🧪 [kettle-ndjson on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
-| 🧊 [kettle-ndjson on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
-| 🐙 [kettle-ndjson on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
-| 🎮️ | | | | | | |
+| 🧪 [kettle-dev/kettle-ndjson on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
+| 🧊 [kettle-dev/kettle-ndjson on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
+| 🐙 [kettle-dev/kettle-ndjson on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
+| 🎮️ [Discord Server][✉️discord-invite] | [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
 
 </details>
 
@@ -92,7 +98,7 @@ The maintainers of this and thousands of other packages are working with Tidelif
 
 Alternatively:
 
--
+- [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite]
 - [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork]
 - [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]
 
@@ -137,21 +143,21 @@ Use `types:` to filter event streams. Built-in aliases are `default`,
 
 ## 🦷 FLOSS Funding
 
-While pboling tools are free software and will always be, the project would benefit immensely from some funding.
+While kettle-dev tools are free software and will always be, the project would benefit immensely from some funding.
 Raising a monthly budget of... "dollars" would make the project more sustainable.
 
 We welcome both individual and corporate sponsors! We also offer a
 wide array of funding channels to account for your preferences.
-Currently, is our preferred funding platform.
+Currently, [Open Collective][🖇osc] is our preferred funding platform.
 
-**If you're working in a company that's making significant use of pboling tools we'd
-appreciate it if you suggest to your company to become a pboling sponsor.**
+**If you're working in a company that's making significant use of kettle-dev tools we'd
+appreciate it if you suggest to your company to become a kettle-dev sponsor.**
 
-You can support the development of pboling tools via
-,
-,
-,
-
+You can support the development of kettle-dev tools via
+[GitHub Sponsors][🖇sponsor],
+[Liberapay][⛳liberapay],
+[PayPal][🖇paypal],
+[Open Collective][🖇osc]
 and [Tidelift][🏙️entsup-tidelift].
 
 | 📍 NOTE |
@@ -186,9 +192,11 @@ I’m driven by a passion to foster a thriving open-source community – a space
 
 If you work at a company that uses my work, please encourage them to support me as a corporate sponsor. My work on gems you use might show up in `bundle fund`.
 
-I’m developing a new library,, designed to empower open-source developers like myself to get paid for the work we do, in a sustainable way. Please give it a look.
+I’m developing a new library, [floss_funding][🖇floss-funding-gem], designed to empower open-source developers like myself to get paid for the work we do, in a sustainable way. Please give it a look.
 
 **[Floss-Funding.dev][🖇floss-funding.dev]: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled nags**
+
+[![OpenCollective Backers][🖇osc-backers-i]][🖇osc-backers] [![OpenCollective Sponsors][🖇osc-sponsors-i]][🖇osc-sponsors] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate to my FLOSS efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
 
 ## 🔐 Security
 
@@ -232,12 +240,12 @@ chat rooms and mailing lists agrees to follow the [![Contributor Covenant 2.1][�
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors:
+Also see GitLab Contributors: [https://gitlab.com/kettle-dev/kettle-ndjson/-/graphs/main][🚎contributors-gl]
 
 <details markdown="1">
  <summary>⭐️ Star History</summary>
 
-<a href="https://star-history.com/#kettle-dev/kettle-ndjson&Date">
+<a href="https://star-history.com/kettle-dev/kettle-ndjson&Date">
  <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&type=Date&theme=dark" />
  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&type=Date" />
@@ -300,9 +308,11 @@ Please consider sponsoring me or the project.
 
 To join the community or get help 👇️ Join the Discord.
 
+[![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite]
+
 To say "thanks!" ☝️ Join the Discord or 👇️ send money.
 
-💌 💌 💌
+[![Sponsor kettle-dev/kettle-ndjson on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal]
 
 ### Please give the project a star ⭐ ♥.
 
@@ -400,54 +410,21 @@ Thanks for RTFM. ☺️
 [👽dl-ranki]: https://img.shields.io/gem/rd/kettle-ndjson.svg
 [👽version]: https://bestgems.org/gems/kettle-ndjson
 [👽versioni]: https://img.shields.io/gem/v/kettle-ndjson.svg
-[🏀qlty-mnt]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson
-[🏀qlty-mnti]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson/maintainability.svg
-[🏀qlty-cov]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson/metrics/code?sort=coverageRating
-[🏀qlty-covi]: https://qlty.sh/gh/kettle-dev/kettle-ndjson/projects/kettle-ndjson/coverage.svg
+[🏀qlty-mnt]: https://qlty.sh/gh/kettle-dev/projects/kettle-ndjson
+[🏀qlty-mnti]: https://qlty.sh/gh/kettle-dev/projects/kettle-ndjson/maintainability.svg
+[🏀qlty-cov]: https://qlty.sh/gh/kettle-dev/projects/kettle-ndjson/metrics/code?sort=coverageRating
+[🏀qlty-covi]: https://qlty.sh/gh/kettle-dev/projects/kettle-ndjson/coverage.svg
 [🏀codecov]: https://codecov.io/gh/kettle-dev/kettle-ndjson
 [🏀codecovi]: https://codecov.io/gh/kettle-dev/kettle-ndjson/graph/badge.svg
 [🏀coveralls]: https://coveralls.io/github/kettle-dev/kettle-ndjson?branch=main
 [🏀coveralls-img]: https://coveralls.io/repos/github/kettle-dev/kettle-ndjson/badge.svg?branch=main
-[🚎ruby-2.4-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.4.yml
-[🚎ruby-2.4-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.4.yml/badge.svg
-[🚎ruby-2.5-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.5.yml
-[🚎ruby-2.5-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.5.yml/badge.svg
-[🚎ruby-2.6-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.6.yml
-[🚎ruby-2.6-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.6.yml/badge.svg
-[🚎ruby-2.7-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.7.yml
-[🚎ruby-2.7-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-2.7.yml/badge.svg
-[🚎ruby-3.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.0.yml
-[🚎ruby-3.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.0.yml/badge.svg
-[🚎ruby-3.1-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.1.yml
-[🚎ruby-3.1-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.1.yml/badge.svg
 [🚎ruby-3.2-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.2.yml
-[🚎ruby-3.2-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.2.yml/badge.svg
 [🚎ruby-3.3-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.3.yml
-[🚎ruby-3.3-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.3.yml/badge.svg
 [🚎ruby-3.4-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.4.yml
-[🚎ruby-3.4-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/ruby-3.4.yml/badge.svg
-[🚎jruby-9.1-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.1.yml
-[🚎jruby-9.1-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.1.yml/badge.svg
-[🚎jruby-9.2-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.2.yml
-[🚎jruby-9.2-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.2.yml/badge.svg
-[🚎jruby-9.3-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.3.yml
-[🚎jruby-9.3-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.3.yml/badge.svg
-[🚎jruby-9.4-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.4.yml
-[🚎jruby-9.4-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-9.4.yml/badge.svg
 [🚎jruby-10.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-10.0.yml
-[🚎jruby-10.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/jruby-10.0.yml/badge.svg
-[🚎truby-22.3-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-22.3.yml
-[🚎truby-22.3-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-22.3.yml/badge.svg
-[🚎truby-23.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.0.yml
-[🚎truby-23.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.0.yml/badge.svg
-[🚎truby-23.1-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.1.yml
-[🚎truby-23.1-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-23.1.yml/badge.svg
 [🚎truby-24.2-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-24.2.yml
-[🚎truby-24.2-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-24.2.yml/badge.svg
 [🚎truby-25.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-25.0.yml
-[🚎truby-25.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-25.0.yml/badge.svg
 [🚎truby-33.0-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-33.0.yml
-[🚎truby-33.0-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/truffleruby-33.0.yml/badge.svg
 [🚎2-cov-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/coverage.yml
 [🚎2-cov-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/coverage.yml/badge.svg
 [🚎3-hd-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/heads.yml
@@ -468,36 +445,16 @@ Thanks for RTFM. ☺️
 [🚎14-🔓️-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/unlocked_deps.yml/badge.svg
 [🚎15-🪪-wf]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/license-eye.yml
 [🚎15-🪪-wfi]: https://github.com/kettle-dev/kettle-ndjson/actions/workflows/license-eye.yml/badge.svg
-[💎ruby-1.8i]: https://img.shields.io/badge/Ruby-1.8_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-1.9i]: https://img.shields.io/badge/Ruby-1.9_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.0i]: https://img.shields.io/badge/Ruby-2.0_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.1i]: https://img.shields.io/badge/Ruby-2.1_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.2i]: https://img.shields.io/badge/Ruby-2.2_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.3i]: https://img.shields.io/badge/Ruby-2.3_(%F0%9F%9A%ABCI)-AABBCC?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.6i]: https://img.shields.io/badge/Ruby-2.6-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-2.7i]: https://img.shields.io/badge/Ruby-2.7-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-3.0i]: https://img.shields.io/badge/Ruby-3.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-3.1i]: https://img.shields.io/badge/Ruby-3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.2i]: https://img.shields.io/badge/Ruby-3.2-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.3i]: https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.4i]: https://img.shields.io/badge/Ruby-3.4-CC342D?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-4.0i]: https://img.shields.io/badge/Ruby-4.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-c-i]: https://img.shields.io/badge/Ruby-current-CC342D?style=for-the-badge&logo=ruby&logoColor=green
 [💎ruby-headi]: https://img.shields.io/badge/Ruby-HEAD-CC342D?style=for-the-badge&logo=ruby&logoColor=blue
-[💎truby-22.3i]: https://img.shields.io/badge/Truffle_Ruby-22.3-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
-[💎truby-23.0i]: https://img.shields.io/badge/Truffle_Ruby-23.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
-[💎truby-23.1i]: https://img.shields.io/badge/Truffle_Ruby-23.1-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-24.2i]: https://img.shields.io/badge/Truffle_Ruby-24.2-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-25.0i]: https://img.shields.io/badge/Truffle_Ruby-25.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-33.0i]: https://img.shields.io/badge/Truffle_Ruby-33.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-c-i]: https://img.shields.io/badge/Truffle_Ruby-current-34BCB1?style=for-the-badge&logo=ruby&logoColor=green
 [💎truby-headi]: https://img.shields.io/badge/Truffle_Ruby-HEAD-34BCB1?style=for-the-badge&logo=ruby&logoColor=blue
-[💎jruby-9.1i]: https://img.shields.io/badge/JRuby-9.1-FBE742?style=for-the-badge&logo=ruby&logoColor=red
-[💎jruby-9.2i]: https://img.shields.io/badge/JRuby-9.2-FBE742?style=for-the-badge&logo=ruby&logoColor=red
-[💎jruby-9.3i]: https://img.shields.io/badge/JRuby-9.3-FBE742?style=for-the-badge&logo=ruby&logoColor=red
-[💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-10.0i]: https://img.shields.io/badge/JRuby-10.0-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
