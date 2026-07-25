@@ -22,9 +22,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- Lowered the published runtime Ruby floor to Ruby 2.4.0 so Kettle tools that
-  support older Rubies can depend on `kettle-ndjson`.
-
 ### Deprecated
 
 ### Removed
@@ -32,6 +29,18 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [0.1.1] - 2026-07-25
+
+- TAG: [v0.1.1][0.1.1t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 19.35% documented
+
+### Changed
+
+- Lowered the published runtime Ruby floor to Ruby 2.4.0 so Kettle tools that
+  support older Rubies can depend on `kettle-ndjson`.
 
 ## [0.1.0] - 2026-07-25
 
@@ -50,6 +59,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.0...v0.1.1
+[0.1.1t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.1
 [0.1.0]: https://github.com/kettle-dev/kettle-ndjson/compare/b960037607f365b15262f5bf24417ded4dca5378...v0.1.0
 [0.1.0t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.0
