@@ -20,12 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Added `Kettle::Ndjson` event stream, recorder, filter, timing, step,
-  diagnostic, and summary helpers for newline-delimited JSON CLI events.
-
 ### Changed
-
-- kettle-jem-template-initial - Initial templating by kettle-jem.
 
 ### Deprecated
 
@@ -35,6 +30,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Security
 
-## [0.1.0] - 2026-07-24
+## [0.1.0] - 2026-07-25
 
+- TAG: [v0.1.0][0.1.0t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 19.35% documented
 - Initial release
+
+### Added
+
+- Added `Kettle::Ndjson` event stream, recorder, filter, timing, step,
+  diagnostic, and summary helpers for newline-delimited JSON CLI events.
+
+### Changed
+
+- kettle-jem-template-initial - Initial templating by kettle-jem.
+
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/kettle-dev/kettle-ndjson/compare/b960037607f365b15262f5bf24417ded4dca5378...v0.1.0
+[0.1.0t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.0
