@@ -52,6 +52,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- kettle-jem-template-20260726-002 - Generated version files now document their
+  version namespace and constants, reducing warning-only YARD lint output.
+
 ### Security
 
 ## [0.1.1] - 2026-07-25
