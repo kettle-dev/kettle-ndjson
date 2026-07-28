@@ -22,6 +22,7 @@ end
 # External RSpec & related config
 require "stringio"
 require "kettle/test/rspec"
+# `kettle/test/rspec` installs harness helpers documented in spec/README.md.
 
 require "kettle/ndjson"
 
