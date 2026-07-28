@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.2] - 2026-07-28
+
+- TAG: [v0.1.2][0.1.2t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Added
+
 - kettle-jem-template-20260726-001 - Projects now include YARD lint
   configuration and documentation dependencies so documentation issues fail
   before generated docs are refreshed.
@@ -53,10 +72,6 @@ Please file a bug if you notice a violation of semantic versioning.
   setup-ruby-flash planning and can prepare appraisal-only jobs without
   installing the main Gemfile bundle.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - kettle-jem-template-20260726-002 - Generated version files now document their
@@ -71,8 +86,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260728-003 - Generated dep-heads workflows now run
   TruffleRuby jobs with current RubyGems and Bundler, avoiding setup failures
   before the test suite starts.
-
-### Security
 
 ## [0.1.1] - 2026-07-25
 
@@ -103,7 +116,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.1...v0.1.2
+[0.1.2t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.2
 [0.1.1]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.0...v0.1.1
 [0.1.1t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.1
 [0.1.0]: https://github.com/kettle-dev/kettle-ndjson/compare/b960037607f365b15262f5bf24417ded4dca5378...v0.1.0
