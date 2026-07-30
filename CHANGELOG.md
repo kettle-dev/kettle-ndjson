@@ -20,15 +20,28 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- kettle-jem-template-20260729-005 - Gemspec metadata now publishes this
-  project's RubyForum tag as `mailing_list_uri`, and support docs link to the
-  tagged RubyForum community alongside Discord.
-
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.3] - 2026-07-30
+
+- TAG: [v0.1.3][0.1.3t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Added
+
+- kettle-jem-template-20260729-005 - Gemspec metadata now publishes this
+  project's RubyForum tag as `mailing_list_uri`, and support docs link to the
+  tagged RubyForum community alongside Discord.
 
 ### Fixed
 
@@ -52,8 +65,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs
   relative to the gemspec directory, so packaged template assets are included
   even when the gemspec is loaded from another working directory.
-
-### Security
 
 ## [0.1.2] - 2026-07-28
 
@@ -141,7 +152,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.2...v0.1.3
+[0.1.3t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.3
 [0.1.2]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.1...v0.1.2
 [0.1.2t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.2
 [0.1.1]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.0...v0.1.1
