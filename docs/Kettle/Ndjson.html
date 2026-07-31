@@ -118,6 +118,8 @@
 </span><span class='words_sep'>  </span><span class='tstring_content'>phase_finish</span><span class='words_sep'>
 </span><span class='words_sep'>  </span><span class='tstring_content'>command_step</span><span class='words_sep'>
 </span><span class='words_sep'>  </span><span class='tstring_content'>secret_provider</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_content'>remote_parity</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_content'>ci_monitor</span><span class='words_sep'>
 </span><span class='words_sep'>  </span><span class='tstring_content'>diagnostic</span><span class='words_sep'>
 </span><span class='words_sep'>  </span><span class='tstring_content'>summary</span><span class='words_sep'>
 </span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
@@ -469,12 +471,12 @@
       <pre class="lines">
 
 
-127
-128
-129</pre>
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compact_payload'>compact_payload</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
@@ -499,8 +501,6 @@
       <pre class="lines">
 
 
-95
-96
 97
 98
 99
@@ -512,10 +512,12 @@
 105
 106
 107
-108</pre>
+108
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emit_diagnostic_event'>emit_diagnostic_event</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='id identifier rubyid_diagnostic'>diagnostic</span><span class='comma'>,</span> <span class='label'>index:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>total:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='id identifier rubyid_diagnostic'>diagnostic</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_h</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_diagnostic'>diagnostic</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span> <span class='op'>:</span> <span class='lbrace'>{</span><span class='label'>message:</span> <span class='id identifier rubyid_diagnostic'>diagnostic</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span>
@@ -551,14 +553,14 @@
       <pre class="lines">
 
 
-52
-53
 54
 55
-56</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emit_event'>emit_event</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_events'>events</span>
@@ -585,13 +587,13 @@
       <pre class="lines">
 
 
-58
-59
 60
-61</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emit_phase_event'>emit_phase_event</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='id identifier rubyid_phase'>phase</span><span class='comma'>,</span> <span class='label'>status:</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_event_type'>event_type</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>started</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>phase_start</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>phase_finish</span><span class='tstring_end'>&quot;</span></span>
@@ -617,8 +619,6 @@
       <pre class="lines">
 
 
-77
-78
 79
 80
 81
@@ -633,10 +633,12 @@
 90
 91
 92
-93</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emit_step_event'>emit_step_event</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='id identifier rubyid_event_type'>event_type</span><span class='comma'>,</span> <span class='id identifier rubyid_step'>step</span><span class='comma'>,</span> <span class='label'>phase:</span><span class='comma'>,</span> <span class='label'>index:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>total:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_emit_event'>emit_event</span><span class='lparen'>(</span>
@@ -675,12 +677,12 @@
       <pre class="lines">
 
 
-110
-111
-112</pre>
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emit_summary_event'>emit_summary_event</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_emit_event'>emit_event</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>mark:</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:mark</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -705,12 +707,12 @@
       <pre class="lines">
 
 
-35
-36
-37</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_event_recorder'>event_recorder</span><span class='lparen'>(</span><span class='id identifier rubyid_stream'>stream</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>phase_timings:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Ndjson/EventRecorder.html" title="Kettle::Ndjson::EventRecorder (class)">EventRecorder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Ndjson/EventRecorder.html#initialize-instance_method" title="Kettle::Ndjson::EventRecorder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_stream'>stream</span><span class='comma'>,</span> <span class='id identifier rubyid_phase_timings'>phase_timings</span><span class='rparen'>)</span>
@@ -735,12 +737,12 @@
       <pre class="lines">
 
 
-31
-32
-33</pre>
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_event_stream'>event_stream</span><span class='lparen'>(</span><span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='label'>types:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>event_types:</span> <span class='const'><span class='object_link'><a href="#EVENT_TYPES-constant" title="Kettle::Ndjson::EVENT_TYPES (constant)">EVENT_TYPES</a></span></span><span class='comma'>,</span> <span class='label'>aliases:</span> <span class='const'><span class='object_link'><a href="#EVENT_TYPE_ALIASES-constant" title="Kettle::Ndjson::EVENT_TYPE_ALIASES (constant)">EVENT_TYPE_ALIASES</a></span></span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Ndjson/EventStream.html" title="Kettle::Ndjson::EventStream (class)">EventStream</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Ndjson/EventStream.html#initialize-instance_method" title="Kettle::Ndjson::EventStream#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='label'>types:</span> <span class='id identifier rubyid_normalize_event_types'>normalize_event_types</span><span class='lparen'>(</span><span class='id identifier rubyid_types'>types</span><span class='comma'>,</span> <span class='label'>event_types:</span> <span class='id identifier rubyid_event_types'>event_types</span><span class='comma'>,</span> <span class='label'>aliases:</span> <span class='id identifier rubyid_aliases'>aliases</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -788,8 +790,6 @@
       <pre class="lines">
 
 
-39
-40
 41
 42
 43
@@ -799,10 +799,12 @@
 47
 48
 49
-50</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normalize_event_types'>normalize_event_types</span><span class='lparen'>(</span><span class='id identifier rubyid_types'>types</span><span class='comma'>,</span> <span class='label'>event_types:</span> <span class='const'><span class='object_link'><a href="#EVENT_TYPES-constant" title="Kettle::Ndjson::EVENT_TYPES (constant)">EVENT_TYPES</a></span></span><span class='comma'>,</span> <span class='label'>aliases:</span> <span class='const'><span class='object_link'><a href="#EVENT_TYPE_ALIASES-constant" title="Kettle::Ndjson::EVENT_TYPE_ALIASES (constant)">EVENT_TYPE_ALIASES</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_requested'>requested</span> <span class='op'>=</span> <span class='id identifier rubyid_types'>types</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
@@ -836,14 +838,14 @@
       <pre class="lines">
 
 
-121
-122
 123
 124
-125</pre>
+125
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_payload_value'>payload_value</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_public_send'>public_send</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -870,8 +872,6 @@
       <pre class="lines">
 
 
-63
-64
 65
 66
 67
@@ -882,10 +882,12 @@
 72
 73
 74
-75</pre>
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_record_phase_timing'>record_phase_timing</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='id identifier rubyid_phase'>phase</span><span class='comma'>,</span> <span class='label'>status:</span><span class='comma'>,</span> <span class='label'>duration_ms:</span><span class='comma'>,</span> <span class='label'>payload:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_events'>events</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:record_phase_timing</span><span class='rparen'>)</span>
@@ -920,15 +922,15 @@
       <pre class="lines">
 
 
-114
-115
 116
 117
 118
-119</pre>
+119
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_step_event_mark'>step_event_mark</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_payload_value'>payload_value</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='comma'>,</span> <span class='symbol'>:status</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>started</span><span class='tstring_end'>&quot;</span></span>
