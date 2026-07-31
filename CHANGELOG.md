@@ -20,6 +20,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- `release_lockfile` and `release_probe` are now first-class NDJSON event types
+  for release tooling that needs to surface lockfile reset and published-gem
+  availability probe activity.
+
 ### Changed
 
 ### Deprecated

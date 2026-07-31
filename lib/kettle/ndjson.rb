@@ -17,6 +17,8 @@ module Kettle
       ci_monitor
       pre_release
       changelog
+      release_lockfile
+      release_probe
       diagnostic
       summary
     ].freeze
@@ -86,6 +88,7 @@ module Kettle
         index: index,
         total: total,
         name: payload_value(step, :name),
+        summary: payload_value(step, :summary),
         status: payload_value(step, :status),
         reason: payload_value(step, :reason),
         command: payload_value(step, :command),

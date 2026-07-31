@@ -13,6 +13,8 @@ RSpec.describe Kettle::Ndjson do
     expect(described_class.normalize_event_types("ci-monitor")).to eq(%w[ci_monitor])
     expect(described_class.normalize_event_types("pre-release")).to eq(%w[pre_release])
     expect(described_class.normalize_event_types("changelog")).to eq(%w[changelog])
+    expect(described_class.normalize_event_types("release-lockfile")).to eq(%w[release_lockfile])
+    expect(described_class.normalize_event_types("release-probe")).to eq(%w[release_probe])
     expect(described_class.normalize_event_types("command_step,summary")).to eq(%w[command_step summary])
     expect(described_class.normalize_event_types("command-step,summary")).to eq(%w[command_step summary])
   end
@@ -99,7 +101,7 @@ RSpec.describe Kettle::Ndjson do
     described_class.emit_step_event(
       stream,
       "command_step",
-      {name: "bundle_install", status: "started", command: %w[bundle install]},
+      {name: "bundle_install", summary: "dependencies", status: "started", command: %w[bundle install]},
       phase: "prepare",
       index: 1,
       total: 2
@@ -114,7 +116,7 @@ RSpec.describe Kettle::Ndjson do
     )
 
     events = io.string.lines.map { |line| JSON.parse(line) }
-    expect(events.first).to include("mark" => ">", "changed_count" => 0)
+    expect(events.first).to include("mark" => ">", "changed_count" => 0, "summary" => "dependencies")
     expect(events.last).to include("mark" => "*", "changed_count" => 1, "changed_files" => ["docs/index.html"])
   end
 
