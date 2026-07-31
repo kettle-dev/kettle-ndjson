@@ -20,9 +20,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- `secret_provider` is now a first-class NDJSON event type for release tooling
-  that needs to surface secret-provider keepalive and prompt activity.
-
 ### Changed
 
 ### Deprecated
@@ -32,6 +29,18 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [0.1.4] - 2026-07-31
+
+- TAG: [v0.1.4][0.1.4t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Added
+
+- `secret_provider` is now a first-class NDJSON event type for release tooling
+  that needs to surface secret-provider keepalive and prompt activity.
 
 ## [0.1.3] - 2026-07-30
 
@@ -155,7 +164,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.3...v0.1.4
+[0.1.4t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.4
 [0.1.3]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.2...v0.1.3
 [0.1.3t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.3
 [0.1.2]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.1...v0.1.2
