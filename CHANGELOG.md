@@ -20,6 +20,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- `remote_parity` is now a first-class NDJSON event type for release tooling
+  that needs to surface remote fetch, skip, failure, and parity activity.
+
 ### Changed
 
 ### Deprecated

@@ -13,6 +13,7 @@ module Kettle
       phase_finish
       command_step
       secret_provider
+      remote_parity
       diagnostic
       summary
     ].freeze
