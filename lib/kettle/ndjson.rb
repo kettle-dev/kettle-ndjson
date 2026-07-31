@@ -14,6 +14,7 @@ module Kettle
       command_step
       secret_provider
       remote_parity
+      ci_monitor
       diagnostic
       summary
     ].freeze

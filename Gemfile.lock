@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kettle-ndjson (0.1.5)
+    kettle-ndjson (0.1.6)
       version_gem (~> 1.1, >= 1.1.14)
 
 GEM
@@ -510,7 +510,7 @@ CHECKSUMS
   kettle-dev (2.5.11) sha256=212a19605853358afb373dd9953f4382601600bdae6c9c3cacecc36807b41666
   kettle-family (1.2.12) sha256=ea81adc2958f85cac25dbc356488d15b717dca98b2e151c53e24841c53fd4b7e
   kettle-gha-pins (0.3.4) sha256=270319d8bf282a77c2f7c2f0767a2721d42d12909744b05e8d78e52f0ffab1e4
-  kettle-ndjson (0.1.5)
+  kettle-ndjson (0.1.6)
   kettle-rb (0.1.7) sha256=eb1da06569bc05a372b8414e37ae09611d649b19e1ebc5347af7af0fff143181
   kettle-soup-cover (3.0.6) sha256=bbcef0b5387e33967a2b82643ce02537ca0fc2dd89503efcda22230ef95837cd
   kettle-test (2.0.17) sha256=0d1d7a40696ddc308c13b9feb5c0317fb92853f0d3c12b4b0a77bccc96599731

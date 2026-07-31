@@ -23,6 +23,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - `remote_parity` is now a first-class NDJSON event type for release tooling
   that needs to surface remote fetch, skip, failure, and parity activity.
 
+- `ci_monitor` is now a first-class NDJSON event type for release tooling that
+  needs to surface CI monitoring lifecycle activity.
+
 ### Changed
 
 ### Deprecated

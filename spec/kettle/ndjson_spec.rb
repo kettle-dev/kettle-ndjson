@@ -10,6 +10,7 @@ RSpec.describe Kettle::Ndjson do
     expect(described_class.normalize_event_types("progress")).to eq(%w[run_start phase_start phase_finish command_step summary])
     expect(described_class.normalize_event_types("secret-provider")).to eq(%w[secret_provider])
     expect(described_class.normalize_event_types("remote-parity")).to eq(%w[remote_parity])
+    expect(described_class.normalize_event_types("ci-monitor")).to eq(%w[ci_monitor])
     expect(described_class.normalize_event_types("command_step,summary")).to eq(%w[command_step summary])
     expect(described_class.normalize_event_types("command-step,summary")).to eq(%w[command_step summary])
   end
