@@ -45,6 +45,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - `ci_monitor` is now a first-class NDJSON event type for release tooling that
   needs to surface CI monitoring lifecycle activity.
 
+- `pre_release` is now a first-class NDJSON event type for release tooling that
+  needs to surface pre-release check activity.
+
 ## [0.1.4] - 2026-07-31
 
 - TAG: [v0.1.4][0.1.4t]
