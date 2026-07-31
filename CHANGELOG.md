@@ -20,10 +20,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- `release_lockfile` and `release_probe` are now first-class NDJSON event types
-  for release tooling that needs to surface lockfile reset and published-gem
-  availability probe activity.
-
 ### Changed
 
 ### Deprecated
@@ -33,6 +29,19 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [0.1.9] - 2026-07-31
+
+- TAG: [v0.1.9][0.1.9t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Added
+
+- `release_lockfile` and `release_probe` are now first-class NDJSON event types
+  for release tooling that needs to surface lockfile reset and published-gem
+  availability probe activity.
 
 ## [0.1.6] - 2026-07-31
 
@@ -189,7 +198,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.6...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.9...HEAD
+[0.1.9]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.6...v0.1.9
+[0.1.9t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.9
 [0.1.6]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.4...v0.1.6
 [0.1.6t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.6
 [0.1.4]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.3...v0.1.4

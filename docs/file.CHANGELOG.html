@@ -70,7 +70,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 and <a href="https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html">yes</a>, platform and engine support are part of the <a href="https://github.com/semver/semver/issues/716#issuecomment-869336139">public API</a>.<br>
 Please file a bug if you notice a violation of semantic versioning.</p>
 
-<h2 id="unreleased"><a href="https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.6...HEAD">Unreleased</a></h2>
+<h2 id="unreleased"><a href="https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.9...HEAD">Unreleased</a></h2>
 
 <h3 id="added">Added</h3>
 
@@ -84,6 +84,26 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 
 <h3 id="security">Security</h3>
 
+<h2 id="019---2026-07-31">
+<a href="https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.6...v0.1.9">0.1.9</a> - 2026-07-31</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.9">v0.1.9</a>
+</li>
+  <li>COVERAGE: 100.00% – 74/74 lines in 2 files</li>
+  <li>BRANCH COVERAGE: 96.15% – 25/26 branches in 2 files</li>
+  <li>25.81% documented</li>
+</ul>
+
+<h3 id="added-1">Added</h3>
+
+<ul>
+  <li>
+<code>release_lockfile</code> and <code>release_probe</code> are now first-class NDJSON event types<br>
+for release tooling that needs to surface lockfile reset and published-gem<br>
+availability probe activity.</li>
+</ul>
+
 <h2 id="016---2026-07-31">
 <a href="https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.4...v0.1.6">0.1.6</a> - 2026-07-31</h2>
 
@@ -95,7 +115,7 @@ Please file a bug if you notice a violation of semantic versioning.</p>
   <li>25.81% documented</li>
 </ul>
 
-<h3 id="added-1">Added</h3>
+<h3 id="added-2">Added</h3>
 
 <ul>
   <li>
@@ -105,6 +125,14 @@ that needs to surface remote fetch, skip, failure, and parity activity.</p>
   <li>
     <p><code>ci_monitor</code> is now a first-class NDJSON event type for release tooling that<br>
 needs to surface CI monitoring lifecycle activity.</p>
+  </li>
+  <li>
+    <p><code>pre_release</code> is now a first-class NDJSON event type for release tooling that<br>
+needs to surface pre-release check activity.</p>
+  </li>
+  <li>
+    <p><code>changelog</code> is now a first-class NDJSON event type for release tooling that<br>
+needs to surface changelog plan and coverage activity.</p>
   </li>
 </ul>
 
@@ -119,7 +147,7 @@ needs to surface CI monitoring lifecycle activity.</p>
   <li>25.81% documented</li>
 </ul>
 
-<h3 id="added-2">Added</h3>
+<h3 id="added-3">Added</h3>
 
 <ul>
   <li>
@@ -138,7 +166,7 @@ that needs to surface secret-provider keepalive and prompt activity.</li>
   <li>25.81% documented</li>
 </ul>
 
-<h3 id="added-3">Added</h3>
+<h3 id="added-4">Added</h3>
 
 <ul>
   <li>kettle-jem-template-20260729-005 - Gemspec metadata now publishes this<br>
@@ -183,7 +211,7 @@ even when the gemspec is loaded from another working directory.</li>
   <li>25.81% documented</li>
 </ul>
 
-<h3 id="added-4">Added</h3>
+<h3 id="added-5">Added</h3>
 
 <ul>
   <li>
@@ -274,7 +302,7 @@ support older Rubies can depend on <code>kettle-ndjson</code>.</li>
   <li>Initial release</li>
 </ul>
 
-<h3 id="added-5">Added</h3>
+<h3 id="added-6">Added</h3>
 
 <ul>
   <li>Added <code>Kettle::Ndjson</code> event stream, recorder, filter, timing, step,<br>

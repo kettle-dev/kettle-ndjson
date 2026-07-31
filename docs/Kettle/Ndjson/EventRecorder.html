@@ -253,13 +253,13 @@
       <pre class="lines">
 
 
-150
-151
-152
-153</pre>
+155
+156
+157
+158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_stream'>stream</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_phase_timings'>phase_timings</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='ivar'>@stream</span> <span class='op'>=</span> <span class='id identifier rubyid_stream'>stream</span>
@@ -302,12 +302,12 @@
       <pre class="lines">
 
 
-155
-156
-157</pre>
+160
+161
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_phase_timings'>phase_timings</span>
   <span class='ivar'>@phase_timings</span>
@@ -339,12 +339,12 @@
       <pre class="lines">
 
 
-157
-158
-159</pre>
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emit'>emit</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
   <span class='ivar'>@stream</span><span class='op'>&amp;.</span><span class='id identifier rubyid_emit'>emit</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
@@ -369,12 +369,12 @@
       <pre class="lines">
 
 
-161
-162
-163</pre>
+166
+167
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/kettle/ndjson.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_record_phase_timing'>record_phase_timing</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
   <span class='ivar'>@phase_timings</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../../Kettle.html" title="Kettle (module)">Kettle</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Ndjson.html" title="Kettle::Ndjson (module)">Ndjson</a></span></span><span class='period'>.</span><span class='id identifier rubyid_compact_payload'><span class='object_link'><a href="../Ndjson.html#compact_payload-class_method" title="Kettle::Ndjson.compact_payload (method)">compact_payload</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
