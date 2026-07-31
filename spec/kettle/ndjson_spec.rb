@@ -8,6 +8,7 @@ RSpec.describe Kettle::Ndjson do
   it "normalizes default and alias event filters" do
     expect(described_class.normalize_event_types(nil)).to eq(described_class::DEFAULT_EVENT_TYPES)
     expect(described_class.normalize_event_types("progress")).to eq(%w[run_start phase_start phase_finish command_step summary])
+    expect(described_class.normalize_event_types("secret-provider")).to eq(%w[secret_provider])
     expect(described_class.normalize_event_types("command_step,summary")).to eq(%w[command_step summary])
     expect(described_class.normalize_event_types("command-step,summary")).to eq(%w[command_step summary])
   end

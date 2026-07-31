@@ -20,6 +20,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- `secret_provider` is now a first-class NDJSON event type for release tooling
+  that needs to surface secret-provider keepalive and prompt activity.
+
 ### Changed
 
 ### Deprecated

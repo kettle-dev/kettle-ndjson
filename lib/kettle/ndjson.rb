@@ -12,6 +12,7 @@ module Kettle
       phase_start
       phase_finish
       command_step
+      secret_provider
       diagnostic
       summary
     ].freeze
