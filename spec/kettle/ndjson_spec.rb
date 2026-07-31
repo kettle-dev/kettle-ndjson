@@ -12,6 +12,7 @@ RSpec.describe Kettle::Ndjson do
     expect(described_class.normalize_event_types("remote-parity")).to eq(%w[remote_parity])
     expect(described_class.normalize_event_types("ci-monitor")).to eq(%w[ci_monitor])
     expect(described_class.normalize_event_types("pre-release")).to eq(%w[pre_release])
+    expect(described_class.normalize_event_types("changelog")).to eq(%w[changelog])
     expect(described_class.normalize_event_types("command_step,summary")).to eq(%w[command_step summary])
     expect(described_class.normalize_event_types("command-step,summary")).to eq(%w[command_step summary])
   end

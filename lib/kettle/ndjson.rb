@@ -16,6 +16,7 @@ module Kettle
       remote_parity
       ci_monitor
       pre_release
+      changelog
       diagnostic
       summary
     ].freeze

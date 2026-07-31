@@ -48,6 +48,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - `pre_release` is now a first-class NDJSON event type for release tooling that
   needs to surface pre-release check activity.
 
+- `changelog` is now a first-class NDJSON event type for release tooling that
+  needs to surface changelog plan and coverage activity.
+
 ## [0.1.4] - 2026-07-31
 
 - TAG: [v0.1.4][0.1.4t]
