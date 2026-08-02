@@ -22,12 +22,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- kettle-jem-template-20260801-001 - Generated README gem dashboard links now
-  use ClickGems instead of BestGems.
-
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.10] - 2026-08-01
+
+- TAG: [v0.1.10][0.1.10t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Changed
+
+- kettle-jem-template-20260801-001 - Generated README gem dashboard links now
+  use ClickGems instead of BestGems.
 
 ### Fixed
 
@@ -40,8 +53,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260801-004 - Generated organization README logos now
   use GitHub's stable organization avatar endpoint instead of assuming a
   matching Galtzo-hosted asset exists.
-
-### Security
 
 ## [0.1.9] - 2026-07-31
 
@@ -211,7 +222,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.9...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.10...HEAD
+[0.1.10]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.9...v0.1.10
+[0.1.10t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.10
 [0.1.9]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.6...v0.1.9
 [0.1.9t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.9
 [0.1.6]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.4...v0.1.6
