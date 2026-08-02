@@ -2,7 +2,6 @@
 
 require "json"
 require "version_gem"
-
 require_relative "ndjson/version"
 
 module Kettle
