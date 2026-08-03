@@ -28,10 +28,19 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [0.1.11] - 2026-08-03
+
+- TAG: [v0.1.11][0.1.11t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Fixed
+
 - kettle-jem-template-20260802-001 - Devcontainer JSON files now merge as JSONC,
   preserving comments and trailing commas during template updates.
-
-### Security
 
 ## [0.1.10] - 2026-08-01
 
@@ -204,7 +213,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.10...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.11...HEAD
+[0.1.11]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.10...v0.1.11
+[0.1.11t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.11
 [0.1.10]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.9...v0.1.10
 [0.1.10t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.10
 [0.1.9]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.6...v0.1.9
