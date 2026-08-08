@@ -21,6 +21,10 @@ I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-ta
 
 ## 🌻 Synopsis <a href="https://discord.gg/3qme4XHNKN"><img alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-128px.svg" width="8%" align="right"/></a> <a href="https://ruby-toolbox.com"><img alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5" src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-128px.svg" width="8%" align="right"/></a>
 
+Kettle::Ndjson provides compact newline-delimited JSON event streams for Kettle
+CLI tools, with shared event-type filtering and helpers for phases, steps,
+diagnostics, timings, and summaries.
+
 ## 💡 Info you can shake a stick at
 
 | Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
@@ -117,6 +121,11 @@ gem install kettle-ndjson
 ```
 
 ## ⚙️ Configuration
+
+Create an event stream around the IO that should receive the events. The
+`types:` option accepts an event type or the built-in `default`, `progress`, or
+`all` aliases; event helpers add the phase, step, diagnostic, and summary
+payloads while preserving compact one-event-per-line JSON.
 
 ## 🔧 Basic Usage
 
