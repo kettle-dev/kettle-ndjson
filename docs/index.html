@@ -83,6 +83,10 @@
 <h2 id="-synopsis--">🌻 Synopsis <a href="https://discord.gg/3qme4XHNKN"><img alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-128px.svg" width="8%" align="right"></a> <a href="https://ruby-toolbox.com"><img alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5" src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-128px.svg" width="8%" align="right"></a>
 </h2>
 
+<p>Kettle::Ndjson provides compact newline-delimited JSON event streams for Kettle<br>
+CLI tools, with shared event-type filtering and helpers for phases, steps,<br>
+diagnostics, timings, and summaries.</p>
+
 <h2 id="-info-you-can-shake-a-stick-at">💡 Info you can shake a stick at</h2>
 
 <table>
@@ -167,7 +171,7 @@
 
 <h3 id="compatibility">Compatibility</h3>
 
-<p>Compatible with MRI Ruby 2.4.0+, and concordant releases of JRuby, and TruffleRuby.<br>
+<p>Compatible with MRI Ruby 2.4.0+, JRuby, and TruffleRuby.<br>
 CI workflows and Appraisals are generated for MRI Ruby 3.2.0+.<br>
 This test floor is configured by <code>ruby.test_minimum</code> in <code>.kettle-jem.yml</code> and<br>
 may be higher than the gem’s runtime compatibility floor when legacy Rubies are<br>
@@ -336,6 +340,11 @@ not practical for the current toolchain.</p>
 
 <h2 id="️-configuration">⚙️ Configuration</h2>
 
+<p>Create an event stream around the IO that should receive the events. The<br>
+<code>types:</code> option accepts an event type or the built-in <code>default</code>, <code>progress</code>, or<br>
+<code>all</code> aliases; event helpers add the phase, step, diagnostic, and summary<br>
+payloads while preserving compact one-event-per-line JSON.</p>
+
 <h2 id="-basic-usage">🔧 Basic Usage</h2>
 
 <p>Create an event stream for newline-delimited JSON output:</p>
@@ -427,8 +436,7 @@ and <a href="https://tidelift.com/subscription/pkg/rubygems-kettle-ndjson?utm_so
 <h2 id="-contributing">🤝 Contributing</h2>
 
 <p>If you need some ideas of where to help, you could work on adding more code coverage,<br>
-or if it is already 💯 (see <a href="#code-coverage">below</a>) check <a href="https://github.com/kettle-dev/kettle-ndjson/issues">issues</a> or <a href="https://github.com/kettle-dev/kettle-ndjson/pulls">PRs</a>,<br>
-or use the gem and think about how it could be better.</p>
+check <a href="https://github.com/kettle-dev/kettle-ndjson/issues">issues</a> or <a href="https://github.com/kettle-dev/kettle-ndjson/pulls">PRs</a>, or use the gem and think about how it could be better.</p>
 
 <p>We <a href="https://keepachangelog.com/en/1.0.0/"><img src="https://img.shields.io/badge/keep--a--changelog-1.0.0-34495e.svg?style=flat" alt="Keep A Changelog"></a> so if you make changes, remember to update it.</p>
 
@@ -463,19 +471,6 @@ chat rooms and mailing lists agrees to follow the <a href="https://github.com/ke
 <p>Made with <a href="https://contrib.rocks">contributors-img</a>.</p>
 
 <p>Also see GitLab Contributors: <a href="https://gitlab.com/kettle-dev/kettle-ndjson/-/graphs/main">https://gitlab.com/kettle-dev/kettle-ndjson/-/graphs/main</a></p>
-
-<details>
-  <summary>⭐️ Star History</summary>
-
-  <p><a href="https://star-history.com/kettle-dev/kettle-ndjson&amp;Date"></a></p>
-  <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&amp;type=Date&amp;theme=dark"></source>
- <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&amp;type=Date"></source>
- <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=kettle-dev/kettle-ndjson&amp;type=Date">
- </picture>
-  <p>&lt;/a&gt;</p>
-
-</details>
 
 <h2 id="-versioning">📌 Versioning</h2>
 
