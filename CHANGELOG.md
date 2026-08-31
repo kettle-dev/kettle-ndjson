@@ -20,8 +20,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Add github_release as a structured event type for GitHub Release lifecycle telemetry.
-
 ### Changed
 
 ### Deprecated
@@ -31,6 +29,17 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [0.1.15] - 2026-08-31
+
+- TAG: [v0.1.15][0.1.15t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Added
+
+- Add github_release as a structured event type for GitHub Release lifecycle telemetry.
 
 ## [0.1.14] - 2026-08-31
 
@@ -261,7 +270,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.14...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.15...HEAD
+[0.1.15]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.14...v0.1.15
+[0.1.15t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.15
 [0.1.14]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.13...v0.1.14
 [0.1.14t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.14
 [0.1.13]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.12...v0.1.13
