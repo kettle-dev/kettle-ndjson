@@ -18,6 +18,7 @@ module Kettle
       changelog
       release_lockfile
       release_probe
+      github_release
       diagnostic
       summary
     ].freeze

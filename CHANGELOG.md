@@ -20,6 +20,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- Add github_release as a structured event type for GitHub Release lifecycle telemetry.
+
 ### Changed
 
 ### Deprecated

@@ -15,6 +15,7 @@ RSpec.describe Kettle::Ndjson do
     expect(described_class.normalize_event_types("changelog")).to eq(%w[changelog])
     expect(described_class.normalize_event_types("release-lockfile")).to eq(%w[release_lockfile])
     expect(described_class.normalize_event_types("release-probe")).to eq(%w[release_probe])
+    expect(described_class.normalize_event_types("github_release")).to eq(%w[github_release])
     expect(described_class.normalize_event_types("command_step,summary")).to eq(%w[command_step summary])
     expect(described_class.normalize_event_types("command-step,summary")).to eq(%w[command_step summary])
   end
