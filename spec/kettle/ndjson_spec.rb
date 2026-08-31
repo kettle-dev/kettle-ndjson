@@ -109,7 +109,7 @@ RSpec.describe Kettle::Ndjson do
     described_class.emit_step_event(
       stream,
       "command_step",
-      {name: "docs", status: "ok", changed_files: ["docs/index.html"]},
+      {name: "docs", status: "ok", resume_step: 15, changed_files: ["docs/index.html"]},
       phase: "prepare",
       index: 2,
       total: 2
@@ -117,7 +117,7 @@ RSpec.describe Kettle::Ndjson do
 
     events = io.string.lines.map { |line| JSON.parse(line) }
     expect(events.first).to include("mark" => ">", "changed_count" => 0, "summary" => "dependencies")
-    expect(events.last).to include("mark" => "*", "changed_count" => 1, "changed_files" => ["docs/index.html"])
+    expect(events.last).to include("mark" => "*", "resume_step" => 15, "changed_count" => 1, "changed_files" => ["docs/index.html"])
   end
 
   it "marks failed, blocked, and unchanged command steps distinctly" do

@@ -90,6 +90,7 @@ module Kettle
         summary: payload_value(step, :summary),
         status: payload_value(step, :status),
         reason: payload_value(step, :reason),
+        resume_step: payload_value(step, :resume_step),
         command: payload_value(step, :command),
         path: payload_value(step, :path),
         changed_files: Array(payload_value(step, :changed_files) || []),

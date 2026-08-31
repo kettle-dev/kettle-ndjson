@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Preserve logical release resume steps in NDJSON command events.
+
 ### Security
 
 ## [0.1.13] - 2026-08-28
