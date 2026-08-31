@@ -22,6 +22,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Upgrade the license-eye workflow action pin.
+
 ### Deprecated
 
 ### Removed
