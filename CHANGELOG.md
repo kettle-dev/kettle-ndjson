@@ -22,17 +22,28 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- Upgrade the license-eye workflow action pin.
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
-- Preserve logical release resume steps in NDJSON command events.
-
 ### Security
+
+## [0.1.14] - 2026-08-31
+
+- TAG: [v0.1.14][0.1.14t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Changed
+
+- Upgrade the license-eye workflow action pin.
+
+### Fixed
+
+- Preserve logical release resume steps in NDJSON command events.
 
 ## [0.1.13] - 2026-08-28
 
@@ -248,7 +259,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.13...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.14...HEAD
+[0.1.14]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.13...v0.1.14
+[0.1.14t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.14
 [0.1.13]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.12...v0.1.13
 [0.1.13t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.13
 [0.1.12]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.11...v0.1.12
