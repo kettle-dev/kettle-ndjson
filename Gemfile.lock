@@ -10,7 +10,7 @@ GIT
 PATH
   remote: .
   specs:
-    kettle-ndjson (0.1.13)
+    kettle-ndjson (0.1.14)
       version_gem (~> 1.1, >= 1.1.15)
 
 GEM
@@ -589,7 +589,7 @@ DEPENDENCIES
   kettle-family (~> 1.2, >= 1.2.62)
   kettle-ndjson!
   kettle-soup-cover (~> 3.0, >= 3.0.9)
-  kettle-test (~> 2.0, >= 2.0.20)
+  kettle-test (~> 2.0, >= 2.0.21)
   kramdown (~> 2.5, >= 2.5.2)
   kramdown-parser-gfm (~> 1.1)
   mutex_m (~> 0.2)
@@ -682,7 +682,7 @@ CHECKSUMS
   kettle-family (1.2.63) sha256=204a634223d457b70ca059c6c1f7114e9e316cb591adf9c9f15087183b47d02b
   kettle-gha-pins (0.3.14) sha256=443a218149d3a2ab300875eb10ef55d5c4bc340bce7ba7caba026e1680dd8c21
   kettle-jem (7.1.8) sha256=928b2b4a75c052db7504d9778e6b2180bc5424a0bdd5853ab5d47a2b68185a27
-  kettle-ndjson (0.1.13)
+  kettle-ndjson (0.1.14)
   kettle-rb (0.1.11) sha256=3e50b413048906f2c5aea69ff805fbf8f7f2b5ea9d9e3d95151d38d97d6640f3
   kettle-soup-cover (3.0.10) sha256=579e09d382d5c46b2a4787df492fdf598c774545d4ab1b7bd8cfaf6104424edd
   kettle-test (2.0.21) sha256=2ab0dd1a1d11568f8fba61084ebef84717cd4dff028a527777c92d4e77f0e9c5
