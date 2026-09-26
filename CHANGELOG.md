@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.17] - 2026-09-26
+
+- TAG: [v0.1.17][0.1.17t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Added
+
 - kettle-jem-template-20260913-001 - Templating now also surfaces a review
   entry in `dependency_conflicts.resolve` when a direct development
   dependency doesn't support one or more of this project's declared
@@ -37,14 +56,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - dependencies (1)
   - other (1)
   - workflows (18)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.1.16] - 2026-09-14
 
@@ -302,7 +313,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.16...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.17...HEAD
+[0.1.17]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.16...v0.1.17
+[0.1.17t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.17
 [0.1.16]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.15...v0.1.16
 [0.1.16t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.16
 [0.1.15]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.14...v0.1.15
