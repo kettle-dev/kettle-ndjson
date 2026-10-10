@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.19] - 2026-10-10
+
+- TAG: [v0.1.19][0.1.19t]
+- COVERAGE: 100.00% -- 74/74 lines in 2 files
+- BRANCH COVERAGE: 96.15% -- 25/26 branches in 2 files
+- 25.81% documented
+
+### Changed
+
 - [kc] kettle-jem/prepare: updated 12 project files:
   - dependencies (12)
 
@@ -30,14 +47,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - documentation (1)
   - other (2)
   - workflows (2)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.1.18] - 2026-09-26
 
@@ -337,7 +346,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.18...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.19...HEAD
+[0.1.19]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.18...v0.1.19
+[0.1.19t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.19
 [0.1.18]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.17...v0.1.18
 [0.1.18t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.18
 [0.1.17]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.16...v0.1.17
