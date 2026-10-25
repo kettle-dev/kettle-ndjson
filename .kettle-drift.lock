@@ -3,8 +3,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        51,
-        93
+        70,
+        112
       ]
     }
   ],
@@ -12,8 +12,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        25,
-        153
+        52,
+        172
       ]
     }
   ],
@@ -21,8 +21,17 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        26,
-        154
+        53,
+        173
+      ]
+    }
+  ],
+  "- documentation (1)\n- other (1)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        31,
+        57
       ]
     }
   ],
