@@ -3,8 +3,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        70,
-        112
+        85,
+        127
       ]
     }
   ],
@@ -12,8 +12,17 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        52,
-        172
+        67,
+        187
+      ]
+    }
+  ],
+  "- [kc] kettle-jem/template: updated 1 project file:\n- other (1)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        28,
+        106
       ]
     }
   ],
@@ -21,8 +30,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        53,
-        173
+        68,
+        188
       ]
     }
   ],
@@ -30,8 +39,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        31,
-        57
+        54,
+        72
       ]
     }
   ],
