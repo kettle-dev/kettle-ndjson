@@ -21,6 +21,7 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Added
 
 - `Kettle::Ndjson::TestProgress` and the `test_progress` event type: opt-in (`KETTLE_TEST_EVENTS=1`) throttled test-suite progress events shared by turbo_tests2 and kettle-test
+- `Kettle::Ndjson::Throttle`, `Kettle::Ndjson::Env` (truthy/float-seconds env helpers) and `event_stream(leading_newline:)` (default `false`), the generic pieces under `TestProgress`
 
 ### Changed
 

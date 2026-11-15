@@ -13,19 +13,15 @@ module Kettle
       ENV_KEY = "KETTLE_TEST_EVENTS"
       INTERVAL_ENV_KEY = "KETTLE_TEST_EVENTS_INTERVAL"
       DEFAULT_INTERVAL = 1.0
-      TRUTHY = %w[1 true yes on].freeze
 
       # @return [Boolean] true when KETTLE_TEST_EVENTS is 1/true/yes/on
       def self.enabled?(env = ENV)
-        TRUTHY.include?(env[ENV_KEY].to_s.strip.downcase)
+        Env.enabled?(ENV_KEY, env)
       end
 
       # @return [Float] KETTLE_TEST_EVENTS_INTERVAL seconds, default 1.0 for missing/invalid/negative
       def self.interval_from_env(env = ENV)
-        value = Float(env.fetch(INTERVAL_ENV_KEY, DEFAULT_INTERVAL.to_s))
-        value.negative? ? DEFAULT_INTERVAL : value
-      rescue ArgumentError
-        DEFAULT_INTERVAL
+        Env.seconds(INTERVAL_ENV_KEY, default: DEFAULT_INTERVAL, env: env)
       end
 
       # @return [TestProgress, nil] nil unless opted in
@@ -46,12 +42,13 @@ module Kettle
         @source = source
         @interval = interval
         @clock = clock || -> { Process.clock_gettime(Process::CLOCK_MONOTONIC) }
-        @events = Kettle::Ndjson.event_stream(io, types: EVENT_TYPE)
+        @throttle = Throttle.new(interval: interval, clock: @clock)
+        # Leading newline: progress dots share stdout and would otherwise prefix the JSON.
+        @events = Kettle::Ndjson.event_stream(io, types: EVENT_TYPE, leading_newline: true)
         @examples = 0
         @failures = 0
         @pending = 0
         @started_at = @clock.call
-        @last_tick = nil
         @mutex = Mutex.new
       end
 
@@ -62,10 +59,9 @@ module Kettle
           @pending += 1 if status == :pending
           if status == :failed
             @failures += 1
-            emit("failure", location: location, description: description)
-            @last_tick = @clock.call
+            @throttle.call(force: true) { emit("failure", location: location, description: description) }
           else
-            tick_if_due
+            @throttle.call { emit("tick") }
           end
         end
       end
@@ -76,17 +72,7 @@ module Kettle
 
       private
 
-      def tick_if_due
-        now = @clock.call
-        return if @last_tick && now - @last_tick < @interval
-
-        @last_tick = now
-        emit("tick")
-      end
-
       def emit(kind, extra = {})
-        # Leading newline: progress dots share stdout and would otherwise prefix the JSON.
-        @io.write("\n") if @io.respond_to?(:write)
         Kettle::Ndjson.emit_event(
           @events,
           EVENT_TYPE,

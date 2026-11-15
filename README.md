@@ -143,6 +143,8 @@ progress&.finish
 | `elapsed` | seconds since start (float) |
 | `location`, `description` | `failure` only |
 
+Built from reusable pieces: `Kettle::Ndjson::Throttle` (run a block at most once per interval; `force: true` bypasses and restarts it), `Kettle::Ndjson::Env` (`truthy?`, `enabled?`, `seconds` for env opt-ins) and `event_stream(..., leading_newline: true)` (default `false`).
+
 Opt-in with `KETTLE_TEST_EVENTS=1` (also `true`/`yes`/`on`); `KETTLE_TEST_EVENTS_INTERVAL`
 sets the tick interval in seconds. Each event is preceded by a newline so it starts on its
 own line even amid progress dots.

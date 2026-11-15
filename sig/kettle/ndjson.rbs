@@ -5,7 +5,7 @@ module Kettle
     DEFAULT_EVENT_TYPES: Array[String]
     EVENT_TYPE_ALIASES: Hash[String, Array[String]]
 
-    def self.event_stream: (untyped io, ?types: String? types, ?event_types: Array[String] event_types, ?aliases: Hash[String, Array[String]] aliases) -> EventStream
+    def self.event_stream: (untyped io, ?types: String? types, ?event_types: Array[String] event_types, ?aliases: Hash[String, Array[String]] aliases, ?leading_newline: bool leading_newline) -> EventStream
     def self.event_recorder: (?untyped stream, ?phase_timings: Array[Hash[Symbol, untyped]] phase_timings) -> EventRecorder
     def self.normalize_event_types: (String? types, ?event_types: Array[String] event_types, ?aliases: Hash[String, Array[String]] aliases) -> Array[String]
     def self.emit_event: (untyped events, String type, ?Hash[Symbol, untyped] payload) -> void
@@ -26,7 +26,7 @@ module Kettle
 
     class EventStream
       attr_reader types: Array[String]
-      def initialize: (untyped io, types: Array[String] types) -> void
+      def initialize: (untyped io, types: Array[String] types, ?leading_newline: bool leading_newline) -> void
       def emit: (Hash[Symbol, untyped] payload) -> void
     end
 
@@ -50,7 +50,6 @@ module Kettle
       ENV_KEY: String
       INTERVAL_ENV_KEY: String
       DEFAULT_INTERVAL: Float
-      TRUTHY: Array[String]
 
       def self.enabled?: (?untyped env) -> bool
       def self.interval_from_env: (?untyped env) -> Float
@@ -63,6 +62,23 @@ module Kettle
       def initialize: (io: untyped io, source: String source, ?interval: Numeric interval, ?clock: untyped clock) -> void
       def record: (Symbol status, ?location: String? location, ?description: String? description) -> void
       def finish: () -> void
+    end
+  end
+end
+
+module Kettle
+  module Ndjson
+    module Env
+      TRUTHY: Array[String]
+      def self.truthy?: (untyped value) -> bool
+      def self.enabled?: (String key, ?untyped env) -> bool
+      def self.seconds: (String key, default: Numeric default, ?env: untyped env) -> Float
+    end
+
+    class Throttle
+      attr_reader interval: Numeric
+      def initialize: (interval: Numeric interval, ?clock: untyped clock) -> void
+      def call: (?force: bool force) { () -> void } -> bool
     end
   end
 end
