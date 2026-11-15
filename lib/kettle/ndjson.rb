@@ -3,6 +3,9 @@
 require "json"
 require "version_gem"
 require_relative "ndjson/version"
+require_relative "ndjson/env"
+require_relative "ndjson/throttle"
+require_relative "ndjson/test_progress"
 
 module Kettle
   module Ndjson
@@ -21,6 +24,7 @@ module Kettle
       github_release
       diagnostic
       summary
+      test_progress
     ].freeze
     DEFAULT_EVENT_TYPES = EVENT_TYPES.freeze
     EVENT_TYPE_ALIASES = {
@@ -34,8 +38,8 @@ module Kettle
 
     module_function
 
-    def event_stream(io, types: nil, event_types: EVENT_TYPES, aliases: EVENT_TYPE_ALIASES)
-      EventStream.new(io, types: normalize_event_types(types, event_types: event_types, aliases: aliases))
+    def event_stream(io, types: nil, event_types: EVENT_TYPES, aliases: EVENT_TYPE_ALIASES, leading_newline: false)
+      EventStream.new(io, types: normalize_event_types(types, event_types: event_types, aliases: aliases), leading_newline: leading_newline)
     end
 
     def event_recorder(stream = nil, phase_timings: [])
@@ -137,9 +141,12 @@ module Kettle
     end
 
     class EventStream
-      def initialize(io, types:)
+      # @param leading_newline [Boolean] write "\n" before each event so it starts on its own
+      #   line even when other output shares the stream (e.g. progress dots). Default false.
+      def initialize(io, types:, leading_newline: false)
         @io = io
         @types = types.map(&:to_s)
+        @leading_newline = leading_newline
       end
 
       attr_reader :types
@@ -147,6 +154,7 @@ module Kettle
       def emit(payload)
         return unless @types.include?(payload.fetch(:type).to_s)
 
+        @io.write("\n") if @leading_newline
         @io.puts(JSON.generate(Kettle::Ndjson.compact_payload(payload)))
         @io.flush if @io.respond_to?(:flush)
       end
