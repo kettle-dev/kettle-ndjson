@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.24] - 2026-11-14
+
+- TAG: [v0.1.24][0.1.24t]
+- COVERAGE: 100.00% -- 149/149 lines in 5 files
+- BRANCH COVERAGE: 97.50% -- 39/40 branches in 5 files
+- 46.30% documented
+
+### Added
+
 - `Kettle::Ndjson::TestProgress` and the `test_progress` event type: opt-in (`KETTLE_TEST_EVENTS=1`) throttled test-suite progress events shared by turbo_tests2 and kettle-test
 - `Kettle::Ndjson::Throttle`, `Kettle::Ndjson::Env` (truthy/float-seconds env helpers) and `event_stream(leading_newline:)` (default `false`), the generic pieces under `TestProgress`
 
@@ -33,14 +52,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - dependencies (2)
   - other (3)
   - workflows (3)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.1.23] - 2026-10-28
 
@@ -429,7 +440,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-initial - Initial templating by kettle-jem.
 
-[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.23...HEAD
+[Unreleased]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.24...HEAD
+[0.1.24]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.23...v0.1.24
+[0.1.24t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.24
 [0.1.23]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.22...v0.1.23
 [0.1.23t]: https://github.com/kettle-dev/kettle-ndjson/releases/tag/v0.1.23
 [0.1.22]: https://github.com/kettle-dev/kettle-ndjson/compare/v0.1.21...v0.1.22
