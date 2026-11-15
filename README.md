@@ -113,6 +113,40 @@ Create an event stream around the IO that should receive the events. The
 `all` aliases; event helpers add the phase, step, diagnostic, and summary
 payloads while preserving compact one-event-per-line JSON.
 
+### Test progress events
+
+`Kettle::Ndjson::TestProgress` aggregates test outcomes and emits `test_progress` events:
+a `tick` (at most once per interval, default 1s), an immediate `failure` per failed
+example, and one `final`. Never one event per example. Used by
+[turbo_tests2](https://github.com/galtzo-floss/turbo_tests2) and
+[kettle-test](https://github.com/kettle-dev/kettle-test).
+
+```ruby
+progress = Kettle::Ndjson::TestProgress.from_env(io: $stdout, source: "my-runner") # nil unless KETTLE_TEST_EVENTS=1
+progress&.record(:passed)
+progress&.record(:failed, location: "./spec/a_spec.rb:3", description: "A fails")
+progress&.finish
+```
+
+```json
+{"kind":"tick","source":"my-runner","examples":120,"failures":1,"pending":2,"elapsed":8.31,"type":"test_progress","event_version":1}
+{"kind":"failure","source":"my-runner","examples":57,"failures":1,"pending":0,"elapsed":4.02,"location":"./spec/a_spec.rb:3","description":"A fails","type":"test_progress","event_version":1}
+```
+
+| Field | Meaning |
+| --- | --- |
+| `type` | always `test_progress` |
+| `event_version` | `1` |
+| `kind` | `tick` (throttled), `failure` (immediate), `final` (once) |
+| `source` | emitter name, e.g. `turbo_tests2` or `kettle-test` |
+| `examples`, `failures`, `pending` | running totals |
+| `elapsed` | seconds since start (float) |
+| `location`, `description` | `failure` only |
+
+Opt-in with `KETTLE_TEST_EVENTS=1` (also `true`/`yes`/`on`); `KETTLE_TEST_EVENTS_INTERVAL`
+sets the tick interval in seconds. Each event is preceded by a newline so it starts on its
+own line even amid progress dots.
+
 ## 🔧 Basic Usage
 
 Create an event stream for newline-delimited JSON output:

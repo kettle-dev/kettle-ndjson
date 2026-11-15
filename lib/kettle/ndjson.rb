@@ -3,6 +3,7 @@
 require "json"
 require "version_gem"
 require_relative "ndjson/version"
+require_relative "ndjson/test_progress"
 
 module Kettle
   module Ndjson
@@ -21,6 +22,7 @@ module Kettle
       github_release
       diagnostic
       summary
+      test_progress
     ].freeze
     DEFAULT_EVENT_TYPES = EVENT_TYPES.freeze
     EVENT_TYPE_ALIASES = {

@@ -42,3 +42,27 @@ module Kettle
     end
   end
 end
+
+module Kettle
+  module Ndjson
+    class TestProgress
+      EVENT_TYPE: String
+      ENV_KEY: String
+      INTERVAL_ENV_KEY: String
+      DEFAULT_INTERVAL: Float
+      TRUTHY: Array[String]
+
+      def self.enabled?: (?untyped env) -> bool
+      def self.interval_from_env: (?untyped env) -> Float
+      def self.from_env: (io: untyped io, source: String source, ?env: untyped env) -> TestProgress?
+
+      attr_reader examples: Integer
+      attr_reader failures: Integer
+      attr_reader pending: Integer
+
+      def initialize: (io: untyped io, source: String source, ?interval: Numeric interval, ?clock: untyped clock) -> void
+      def record: (Symbol status, ?location: String? location, ?description: String? description) -> void
+      def finish: () -> void
+    end
+  end
+end
