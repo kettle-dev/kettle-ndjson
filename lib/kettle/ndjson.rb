@@ -2,10 +2,10 @@
 
 require "json"
 require "version_gem"
-require_relative "ndjson/version"
 require_relative "ndjson/env"
 require_relative "ndjson/throttle"
 require_relative "ndjson/test_progress"
+require_relative "ndjson/version"
 
 module Kettle
   module Ndjson
