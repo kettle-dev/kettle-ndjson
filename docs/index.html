@@ -327,6 +327,77 @@ not covered by the generated CI or Appraisal matrix.</p>
 <code>all</code> aliases; event helpers add the phase, step, diagnostic, and summary<br>
 payloads while preserving compact one-event-per-line JSON.</p>
 
+<h3 id="test-progress-events">Test progress events</h3>
+
+<p><code>Kettle::Ndjson::TestProgress</code> aggregates test outcomes and emits <code>test_progress</code> events:<br>
+a <code>tick</code> (at most once per interval, default 1s), an immediate <code>failure</code> per failed<br>
+example, and one <code>final</code>. Never one event per example. Used by<br>
+<a href="https://github.com/galtzo-floss/turbo_tests2">turbo_tests2</a> and<br>
+<a href="https://github.com/kettle-dev/kettle-test">kettle-test</a>.</p>
+
+<pre class="code language-ruby"><code class="language-ruby">progress = Kettle::Ndjson::TestProgress.from_env(io: $stdout, source: &quot;my-runner&quot;) # nil unless KETTLE_TEST_EVENTS=1
+progress&amp;.record(:passed)
+progress&amp;.record(:failed, location: &quot;./spec/a_spec.rb:3&quot;, description: &quot;A fails&quot;)
+progress&amp;.finish
+</code></pre>
+
+<pre class="code language-json"><code class="language-json">{&quot;kind&quot;:&quot;tick&quot;,&quot;source&quot;:&quot;my-runner&quot;,&quot;examples&quot;:120,&quot;failures&quot;:1,&quot;pending&quot;:2,&quot;elapsed&quot;:8.31,&quot;type&quot;:&quot;test_progress&quot;,&quot;event_version&quot;:1}
+{&quot;kind&quot;:&quot;failure&quot;,&quot;source&quot;:&quot;my-runner&quot;,&quot;examples&quot;:57,&quot;failures&quot;:1,&quot;pending&quot;:0,&quot;elapsed&quot;:4.02,&quot;location&quot;:&quot;./spec/a_spec.rb:3&quot;,&quot;description&quot;:&quot;A fails&quot;,&quot;type&quot;:&quot;test_progress&quot;,&quot;event_version&quot;:1}
+</code></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>type</code></td>
+      <td>always <code>test_progress</code>
+</td>
+    </tr>
+    <tr>
+      <td><code>event_version</code></td>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <td><code>kind</code></td>
+      <td>
+<code>tick</code> (throttled), <code>failure</code> (immediate), <code>final</code> (once)</td>
+    </tr>
+    <tr>
+      <td><code>source</code></td>
+      <td>emitter name, e.g. <code>turbo_tests2</code> or <code>kettle-test</code>
+</td>
+    </tr>
+    <tr>
+      <td>
+<code>examples</code>, <code>failures</code>, <code>pending</code>
+</td>
+      <td>running totals</td>
+    </tr>
+    <tr>
+      <td><code>elapsed</code></td>
+      <td>seconds since start (float)</td>
+    </tr>
+    <tr>
+      <td>
+<code>location</code>, <code>description</code>
+</td>
+      <td>
+<code>failure</code> only</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Built from reusable pieces: <code>Kettle::Ndjson::Throttle</code> (run a block at most once per interval; <code>force: true</code> bypasses and restarts it), <code>Kettle::Ndjson::Env</code> (<code>truthy?</code>, <code>enabled?</code>, <code>seconds</code> for env opt-ins) and <code>event_stream(..., leading_newline: true)</code> (default <code>false</code>).</p>
+
+<p>Opt-in with <code>KETTLE_TEST_EVENTS=1</code> (also <code>true</code>/<code>yes</code>/<code>on</code>); <code>KETTLE_TEST_EVENTS_INTERVAL</code><br>
+sets the tick interval in seconds. Each event is preceded by a newline so it starts on its<br>
+own line even amid progress dots.</p>
+
 <h2 id="-basic-usage">🔧 Basic Usage</h2>
 
 <p>Create an event stream for newline-delimited JSON output:</p>
